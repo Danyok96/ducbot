@@ -48,6 +48,7 @@ $app->post('/bot', function() use($app) {
 			    $parser = new FormulaParser($formula, $precision);
 			    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
 			    $request_params['message'] = 'Ответ: '. $result['1'];
+			    if($data->object->body == 'ходж'){$request_params['message'] = 'Собака сутулая.=)';};
 			} catch (\Exception $e) {
 			     $request_params['message'] = 'Неа...';
 			}
