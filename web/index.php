@@ -36,19 +36,20 @@ $app->post('/bot', function() use($app) {
 			$formula = $data->object->body;
 			$precision = 2; // Number of digits after the decimal point
 
+
 			$request_params = array(
 				'user_id' => $data->object->user_id,
 				'message' => 'Тест',
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.69'
 			);
-
+			
 			try {
 			    $parser = new FormulaParser($formula, $precision);
 			    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
 			    $request_params['message'] = 'Ответ: '. $result['1'];
 			} catch (\Exception $e) {
-			     $request_params['message'] = 'Неа...'
+			     $request_params['message'] = 'Неа...';
 			}
 
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
