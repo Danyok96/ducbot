@@ -34,8 +34,8 @@ $app->post('/bot', function() use($app) {
 
 			$request_params = array(
 				'user_id' => $data->object->user_id,
-				'message' => 'Òåñò',
-				'access_tocken' => getenv('VK_TOKEN'),
+				'message' => 'Ð¢ÐµÑÑ‚',
+				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.69'
 			);
 
