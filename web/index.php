@@ -32,7 +32,7 @@ $app->post('/bot', function() use($app) {
 
 		case 'message_new':
 
-			$request_params= array(
+			$request_params = array(
 				'user_id' => $data->object->user_id,
 				'message' => 'Тест',
 				'access_tocken' => getenv('VK_TOKEN'),
