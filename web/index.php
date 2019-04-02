@@ -34,6 +34,7 @@ $app->post('/bot', function() use($app) {
 
 		case 'message_new':
 			$user_id = $data->object->from_id;
+			$peer_id = $data->object->peer_id;
 			$user_resp = [
 				'user_ids' => $user_id,
 				'access_token' => getenv('VK_TOKEN'),
@@ -57,6 +58,7 @@ $app->post('/bot', function() use($app) {
 			$request_params = [
 				'user_id' => $user_id,
 				'random_id' => 0,
+				'peer_id' => $peer_id,
 				'message' => $otvet,
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.92'
