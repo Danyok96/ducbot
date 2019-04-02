@@ -56,7 +56,7 @@ $app->post('/bot', function() use($app) {
 			}
 
 			$request_params = [
-				'user_id' => $user_id,
+				//'user_id' => $user_id,
 				'random_id' => 0,
 				'peer_id' => $peer_id,
 				'message' => $otvet,
