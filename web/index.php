@@ -54,6 +54,14 @@ $app->post('/bot', function() use($app) {
 				}
 			}
 
+			$request_params = [
+				'user_id' => $user_id,
+				'message' => $otvet,
+				'access_token' => getenv('VK_TOKEN'),
+				'v' => '5.69'
+			];
+			
+
 			$formula = $data->object->body;
 			$precision = 2; // Number of digits after the decimal point
 			try {
@@ -64,14 +72,8 @@ $app->post('/bot', function() use($app) {
 			} catch (\Exception $e) {
 			     $request_params['message'] = 'Неа...';
 			}
-			
-			$request_params = [
-				'user_id' => $user_id,
-				'message' => $otvet,
-				'access_token' => getenv('VK_TOKEN'),
-				'v' => '5.69'
-			];
-			
+
+
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 
 			return 'ok';
