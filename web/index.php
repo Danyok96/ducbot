@@ -41,7 +41,7 @@ $app->post('/bot', function() use($app) {
 			];
 			file_get_contents('https://api.vk.com/method/users.get?' . http_build_query($user_resp));
 			$user_info = json_decode(file_get_contents('php://input'));
-			$user_name = $user_info->response[0]->id;
+			$user_name = $user_info->response->id;
 			$message = $data->object->body;
 			$messages_array = [
 				'Привет дуц' => "Привет {$user_name}!",
