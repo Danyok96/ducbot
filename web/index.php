@@ -5,7 +5,7 @@ require('../vendor/autoload.php');
 $app = new Silex\Application();
 $app['debug'] = true;
 
-use FormulaParser\FormulaParser;
+//use FormulaParser\FormulaParser;
 
 // Register the monolog logging service
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
@@ -33,7 +33,7 @@ $app->post('/bot', function() use($app) {
 			break;
 
 		case 'message_new':
-			$user_id = $data->object->peer_id;
+			$user_id = $data->object->user_id;
 			$user_resp = [
 				'user_ids' => $user_id,
 				'access_token' => getenv('VK_TOKEN'),
@@ -41,7 +41,7 @@ $app->post('/bot', function() use($app) {
 			];
 			$user_info = json_decode(file_get_contents('https://api.vk.com/method/users.get?' . http_build_query($user_resp)));
 			$user_name = $user_info->response[0]->first_name;
-			$message = $data->object->text;
+			$message = $data->object->body;
 			$messages_array = [
 				'Привет дуц' =>  "Привет, [id{$user_id}|{$user_name}] !",
 				'Дуц, как дела?' => "Збс, ведь я не учусь.=)",
@@ -58,7 +58,7 @@ $app->post('/bot', function() use($app) {
 				'user_id' => $user_id,
 				'message' => $otvet,
 				'access_token' => getenv('VK_TOKEN'),
-				'v' => '5.92'
+				'v' => '5.69'
 			];
 			
 
@@ -69,6 +69,11 @@ $app->post('/bot', function() use($app) {
 			//     $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
 			//   	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
 			//   	if($result['1'] !== 'Invalid character'){$request_params['message'] = 'Ответ: '. $result['1'];};
+
+			    
+			// } catch (\Exception $e) {
+			//      $request_params['message'] = 'Неа...';
+			// }
 
 
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
