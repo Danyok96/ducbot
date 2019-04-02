@@ -68,6 +68,8 @@ $app->post('/bot', function() use($app) {
 			    $parser = new FormulaParser($formula, $precision);
 			    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
 			  	if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
+			  	if($result['1'] !== 'Invalid character'){$request_params['message'] = 'Ответ: '. $result['1'];};
+			  	
 			    
 			} catch (\Exception $e) {
 			     $request_params['message'] = 'Неа...';
