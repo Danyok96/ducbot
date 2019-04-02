@@ -56,9 +56,10 @@ $app->post('/bot', function() use($app) {
 
 			$request_params = [
 				'user_id' => $user_id,
+				'random_id' => 0,
 				'message' => $otvet,
 				'access_token' => getenv('VK_TOKEN'),
-				'v' => '5.69'
+				'v' => '5.92'
 			];
 			
 
