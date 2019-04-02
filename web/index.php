@@ -16,7 +16,6 @@ $app->get('/', function() use($app) {
 	return "Hello World!";
 });
 
-
 $app->post('/bot', function() use($app) {
 	$data = json_decode(file_get_contents('php://input'));
 
@@ -53,7 +52,23 @@ $app->post('/bot', function() use($app) {
 					$otvet = $v;
 				}
 			}
+//--------------------------------
 
+			$formula = $data->object->body;
+			$precision = 2; // Number of digits after the decimal point
+			try {
+			    $parser = new FormulaParser($formula, $precision);
+			    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
+			    if ($data->object->body == 'Syntax error') {
+			    	# code...
+			    } else {
+			    	$request_params['message'] = 'Ответ: '. $result['1'];
+			    }
+			} catch (\Exception $e) {
+			     $request_params['message'] = 'Неа...';
+			}
+//------------------------------
+			
 			$request_params = [
 				'user_id' => $user_id,
 				'message' => $otvet,
