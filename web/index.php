@@ -62,13 +62,13 @@ $app->post('/bot', function() use($app) {
 			];
 			
 
-			$formula = $data->object->body;
-			$precision = 2; // Number of digits after the decimal point
-			try {
-			    $parser = new FormulaParser($formula, $precision);
-			    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
-			  	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
-			  	if($result['1'] !== 'Invalid character'){$request_params['message'] = 'Ответ: '. $result['1'];};
+			// $formula = $data->object->body;
+			// $precision = 2; // Number of digits after the decimal point
+			// try {
+			//     $parser = new FormulaParser($formula, $precision);
+			//     $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
+			//   	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
+			//   	if($result['1'] !== 'Invalid character'){$request_params['message'] = 'Ответ: '. $result['1'];};
 
 
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
