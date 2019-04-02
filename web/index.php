@@ -59,16 +59,16 @@ $app->post('/bot', function() use($app) {
 			try {
 			    $parser = new FormulaParser($formula, $precision);
 			    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
-			    if ($data->object->body == 'Syntax error') {
-			    	# code...
-			    } else {
-			    	$request_params['message'] = 'Ответ: '. $result['1'];
-			    }
+			  	if($data->object->body !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
+			    
 			} catch (\Exception $e) {
 			     $request_params['message'] = 'Неа...';
 			}
-//------------------------------
-			
+
+
+
+
+
 			$request_params = [
 				'user_id' => $user_id,
 				'message' => $otvet,
