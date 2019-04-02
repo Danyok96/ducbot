@@ -33,7 +33,7 @@ $app->post('/bot', function() use($app) {
 			break;
 
 		case 'message_new':
-			$user_id = $data->object->peer_id;
+			$user_id = $data->object->from_id;
 			$user_resp = [
 				'user_ids' => $user_id,
 				'access_token' => getenv('VK_TOKEN'),
