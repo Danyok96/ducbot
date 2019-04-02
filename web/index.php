@@ -41,10 +41,10 @@ $app->post('/bot', function() use($app) {
 			];
 			file_get_contents('https://api.vk.com/method/users.get?' . http_build_query($user_resp));
 			$user_info = json_decode(file_get_contents('php://input'));
-			$user_name = $user_info->response->id;
+			$user_name = $user_info->response[0]->first_name;
 			$message = $data->object->body;
 			$messages_array = [
-				'Привет дуц' => "Привет {$user_name}!",
+				'Привет дуц' =>  $user_name, //"Привет {$user_name}!",
 				'Дуц, как дела?' => "Збс, ведь я не учусь.=)",
 				'Дуц, что умеешь?' => "Кидать подгоны, чтобы Даня не агрился.=)",
 				'Дуц, кто такой ходж?' => "Нормас чел, иногда сутулы, конечно, но ладно.=)"
