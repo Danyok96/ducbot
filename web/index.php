@@ -6,7 +6,6 @@ $app = new Silex\Application();
 $app['debug'] = true;
 
 //use FormulaParser\FormulaParser;
-date_default_timezone_set(«UTC+3»);
 
 // Register the monolog logging service
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
