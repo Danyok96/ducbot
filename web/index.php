@@ -33,7 +33,7 @@ $app->post('/bot', function() use($app) {
 			break;
 
 		case 'message_new':
-			$user_id = $data->object->user_id;
+			$user_id = $data->object->peer_id;
 			$user_resp = [
 				'user_ids' => $user_id,
 				'access_token' => getenv('VK_TOKEN'),
@@ -41,7 +41,7 @@ $app->post('/bot', function() use($app) {
 			];
 			$user_info = json_decode(file_get_contents('https://api.vk.com/method/users.get?' . http_build_query($user_resp)));
 			$user_name = $user_info->response[0]->first_name;
-			$message = $data->object->body;
+			$message = $data->object->text;
 			$messages_array = [
 				'Привет дуц' =>  "Привет, [id{$user_id}|{$user_name}] !",
 				'Дуц, как дела?' => "Збс, ведь я не учусь.=)",
