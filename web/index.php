@@ -37,7 +37,7 @@ $app->post('/bot', function() use($app) {
 			$user_resp = [
 				'user_ids' => $user_id,
 				//'access_token' => getenv('VK_TOKEN'),
-				'v' => '5.62'
+				'v' => '5.69'
 			];
 			file_get_contents('https://api.vk.com/method/users.get?' . http_build_query($user_resp));
 			$user_info = json_decode(file_get_contents('php://input'));
