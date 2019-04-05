@@ -1,5 +1,6 @@
 <?php
-
+define('TIMEZONE', 'Europe/Moscow');
+date_default_timezone_set(TIMEZONE);
 require('../vendor/autoload.php');
 
 $app = new Silex\Application();
