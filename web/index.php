@@ -47,7 +47,7 @@ $app->post('/bot', function() use($app) {
 			//$message = preg_replace("|[^\d\w ]+|i", "", $message);
 			$date = date("d.m.Y  H:i");
 			$messages_array = [
-				'привет дуц' =>  "Привет, [id{$user_id}|{$user_name}] !",
+				'привет дуц' =>  "Привет, [id{$user_id}|{$user_name}-дуц] !",
 				'дуц, как дела?' => "[id{$user_id}|{$user_name}], збс, ведь я не учусь.=)",
 				'дуц, что умеешь?' => "[id{$user_id}|{$user_name}], кидать подгоны, чтобы Даня не агрился.=)",
 				'дуц, кто такой Ходж?' => "[id{$user_id}|{$user_name}], нормас чел, иногда сутулый, конечно, но ладно.=)",
