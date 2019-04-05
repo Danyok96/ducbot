@@ -46,13 +46,15 @@ $app->post('/bot', function() use($app) {
 			$message = $data->object->text;
 			$message = mb_strtolower($message);
 			//$message = preg_replace("|[^\d\w ]+|i", "", $message);
+			$test = strtotime("04.02.2019");
 			$date = date("d.m.Y  H:i");
+
 			$messages_array = [
 				'привет дуц' =>  "Привет, [id{$user_id}|{$user_name}-дуц] !",
 				'дуц, как дела?' => "[id{$user_id}|{$user_name}-дуц], збс, ведь я не учусь.=)",
 				'дуц, что умеешь?' => "[id{$user_id}|{$user_name}-дуц], кидать подгоны, чтобы Даня не агрился.=)",
 				'дуц, кто такой Ходж?' => "[id{$user_id}|{$user_name}-дуц], нормас чел, иногда сутулый, конечно, но ладно.=)",
-				'дуц, дата?' => "[id{$user_id}|{$user_name}-дуц], {$date}\nНеделя: ".date("W",$date),
+				'дуц, дата?' => "[id{$user_id}|{$user_name}-дуц], {$date}\nНеделя: ".date("W",$test),
 				'дуц, кто такой фил?' => "[id{$user_id}|{$user_name}-дуц], челик, который проебался с арендой тачки.=)",
 				'дуц, кто такой макс?' => "[id{$user_id}|{$user_name}-дуц], заебис чел, битки там, хуё-моё, [id34317520|Krzhprd.] в общем.=)",
 				'дуц, кто такой даня?' => "[id{$user_id}|{$user_name}-дуц], тупо [id20017026|создатель].",
