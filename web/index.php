@@ -44,7 +44,7 @@ $app->post('/bot', function() use($app) {
 			$user_name = $user_info->response[0]->first_name;
 			$message = $data->object->text;
 			$message = mb_strtolower($message);
-			$message = preg_replace("|[^\d\w ]", "", $message);
+			$message = preg_replace("|[^\d\w ]+|i", "", $message);
 			$date = date("d.m.Y  H:i");
 			$messages_array = [
 				'привет дуц' =>  "Привет, [id{$user_id}|{$user_name}] !",
