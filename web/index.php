@@ -45,8 +45,7 @@ $app->post('/bot', function() use($app) {
 			$user_name = $user_info->response[0]->first_name;
 			$message = $data->object->text;
 			$message = mb_strtolower($message);
-			//$message = preg_replace("|[^\d\w ]+|i", "", $message);
-			//$test = strtotime("05.04.2019");
+			$message = preg_replace("|[^\d\w ]+|i","",$message);
 			$date = date("d.m.Y");
 			$time = date("H:i");
 			$test = strtotime($date);
