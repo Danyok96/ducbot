@@ -53,7 +53,7 @@ $app->post('/bot', function() use($app) {
 			$numofweek = date("W",$test);
 			$numofstudweek = $numofweek-5;
 			switch ($message) {
-				case 'привет дуц':
+				case "привет дуц":
 					$otvet = "Привет, [id{$user_id}|{$user_name}-дуц] !";
 					break;
 				
