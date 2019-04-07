@@ -120,7 +120,12 @@ $app->post('/bot', function() use($app) {
 						}
 						else
 						{
-    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
+    							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
+							switch ($day) {
+								case 'Sun':
+									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, сегодня выходной. =)";
+									break;
+							}
 						}
 					break;	
 			}
