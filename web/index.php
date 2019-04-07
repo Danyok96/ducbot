@@ -48,6 +48,7 @@ $app->post('/bot', function() use($app) {
 			$dots = array(".",",","?"," ");
 			$message = str_replace($dots, "", $message);
 			$date = date("d.m.Y");
+			$day = date("D");
 			$time = date("H:i");
 			$test = strtotime($date);
 			$numofweek = date("W",$test);
@@ -66,7 +67,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}-дуц], нормас чел, иногда сутулый, конечно, но ладно.=)";
 					break;
 				case 'дуцдата':
-					$otvet = "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.";
+					$otvet = "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\n День {$date}.";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}-дуц], {$time}.";
