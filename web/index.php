@@ -51,13 +51,13 @@ $app->post('/bot', function() use($app) {
 			$time = date("H:i");
 			$test = strtotime($date);
 			$numofweek = date("W",$test);
-
+			$numofstudweek = $numofweek-5;
 			$messages_array = [
 				'привет дуц' =>  "Привет, [id{$user_id}|{$user_name}-дуц] !",
 				'дуц, как дела?' => "[id{$user_id}|{$user_name}-дуц], збс, ведь я не учусь.=)",
 				'дуц, что умеешь?' => "[id{$user_id}|{$user_name}-дуц], кидать подгоны, чтобы Даня не агрился.=)",
 				'дуц, кто такой Ходж?' => "[id{$user_id}|{$user_name}-дуц], нормас чел, иногда сутулый, конечно, но ладно.=)",
-				'дуц, дата?' => "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofweek}.",
+				'дуц, дата?' => "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.",
 				'дуц, время?' => "[id{$user_id}|{$user_name}-дуц], {$time}.",
 				'дуц, кто такой фил?' => "[id{$user_id}|{$user_name}-дуц], челик, который проебался с арендой тачки.=)",
 				'дуц, кто такой макс?' => "[id{$user_id}|{$user_name}-дуц], заебис чел, битки там, хуё-моё, [id34317520|Krzhprd.] в общем.=)",
