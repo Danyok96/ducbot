@@ -108,7 +108,7 @@ $app->post('/bot', function() use($app) {
 				case 'бунд':
 					$otvet = "[id{$user_id}|{$user_name}-дуц], так, блэт. Успокаеваемся!=)";
 					break;
-				case 'дуцрасписание':
+				case 'дуцрасписаниенасегодня':
 						if(($numofstudweek % 2) == 0)
 						{
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
