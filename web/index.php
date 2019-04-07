@@ -56,10 +56,6 @@ $app->post('/bot', function() use($app) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}-дуц] !";
 					break;
-				
-				default:
-					$otvet = "Хз."
-					break;
 			}
 			// $messages_array = [
 			// 	'привет дуц' =>  "Привет, [id{$user_id}|{$user_name}-дуц] !",
