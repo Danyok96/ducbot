@@ -53,7 +53,6 @@ $app->post('/bot', function() use($app) {
 			$test = strtotime($date);
 			$numofweek = date("W",$test);
 			$numofstudweek = $numofweek-5;
-			$nextday = date("D"+1);
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}-дуц] !";
@@ -68,7 +67,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}-дуц], нормас чел, иногда сутулый, конечно, но ладно.=)";
 					break;
 				case 'дуцдата':
-					$otvet = "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nДень {$day}.\nЗавтра: {$nextday}.";
+					$otvet = "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}-дуц], {$time}.";
