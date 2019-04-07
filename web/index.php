@@ -106,6 +106,13 @@ $app->post('/bot', function() use($app) {
 					break;	
 				case 'бунд':
 					$otvet = "[id{$user_id}|{$user_name}-дуц], так, блэт. Успокаеваемся!=)";
+					break;
+				case 'дуцрасписание':
+						if(($numofstudweek % 2) == 0){
+    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - чётное.";
+						}else{
+    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - не чётное.";
+							}
 					break;	
 			}
 			$request_params = [
