@@ -111,7 +111,7 @@ $app->post('/bot', function() use($app) {
 						if(($numofstudweek % 2) == 0){
     							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 						}else{
-    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель."+"asdas";
+    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 							}
 					break;	
 			}
