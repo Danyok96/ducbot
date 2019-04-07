@@ -109,9 +109,9 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцрасписание':
 						if(($numofstudweek % 2) == 0){
-    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - чётное.";
+    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 						}else{
-    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - не чётное.";
+    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 							}
 					break;	
 			}
