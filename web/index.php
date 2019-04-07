@@ -109,11 +109,19 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}-дуц], так, блэт. Успокаеваемся!=)";
 					break;
 				case 'дуцрасписание':
-						if(($numofstudweek % 2) == 0){
-    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
-						}else{
-    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
+						if(($numofstudweek % 2) == 0)
+						{
+    							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
+							switch ($day) {
+								case 'Sun':
+									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, сегодня выходной. =)";
+									break;
 							}
+						}
+						else
+						{
+    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
+						}
 					break;	
 			}
 			$request_params = [
