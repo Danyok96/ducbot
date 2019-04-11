@@ -114,6 +114,7 @@ $app->post('/bot', function() use($app) {
 				case 'бунд':
 					$otvet = "[id{$user_id}|{$user_name}-дуц], так, блэт. Успокаеваемся!=)";
 					break;
+				}
 				// case 'дуцрасписаниенасегодня':
 				// 		if(($numofstudweek % 2) == 0)
 				// 		{
@@ -270,7 +271,7 @@ $app->post('/bot', function() use($app) {
 				// 			// 		break;
 				// 		}		
 				// 	break;	
-			}
+				
 			$request_params = [
 				//'user_id' => $user_id,
 				'random_id' => 0,
