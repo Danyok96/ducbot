@@ -53,8 +53,12 @@ $app->post('/bot', function() use($app) {
 			$test = strtotime($date);
 			$numofweek = date("W",$test);
 			$numofstudweek = $numofweek-5;
-			$next_day = strtotime("+1 day");
-			$nextday = date("d.m.Y", $next_day);
+			$next_date = strtotime("+1 day");
+			$nextdate = date("d.m.Y", $next_date);
+			$nextday = date("D", $next_date);
+			$testnext = strtotime($nextdate);
+			$numofnextweek = date("W", $testnext);
+			$numofnextstudweek = $numofnextweek-5;
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}-дуц] !";
@@ -69,7 +73,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}-дуц], нормас чел, иногда сутулый, конечно, но ладно.=)";
 					break;
 				case 'дуцдата':
-					$otvet = "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextday}.";
+					$otvet = "[id{$user_id}|{$user_name}-дуц], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}-дуц], {$time}.";
@@ -157,6 +161,54 @@ $app->post('/bot', function() use($app) {
 									break;
 							}
 						}
+					break;
+				case 'дуцрасписаниеназавтра':
+						if(($numofnextstudweek % 2) == 0)
+						{
+    							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
+							switch ($nextday){
+								case 'Sun':
+									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, сегодня выходной. =)";
+									break;
+								case 'Mon':
+									$otvet = "[id{$user_id}|{$user_name}-дуц], сегодня только военка первой парой.";
+									break;
+								case 'Tue':
+									if($nextday == '09.04.2019')
+									{
+										$otvet = "[id{$user_id}|{$user_name}-дуц], сегодня лабы по квантам.";
+									}
+									else
+									{
+										$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, сегодня выходной. =)";
+									}
+									break;
+								case 'Wed':
+									$otvet = "[id{$user_id}|{$user_name}-дуц],\n13:50-15:25 Радиоавтоматика(сем) 526\n15:40-17:15 ЗИС(лек) 417ю\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
+									break;
+								case 'Thu':
+									$otvet = "[id{$user_id}|{$user_name}-дуц],\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ЦОС(сем) 502ю";
+									break;
+								case 'Fri':
+									$otvet = "[id{$user_id}|{$user_name}-дуц],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
+									break;
+								case 'Sat':
+									$otvet = "[id{$user_id}|{$user_name}-дуц],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л";
+									break;
+							}
+						}
+						else
+						{
+    							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
+							switch ($nextday) {
+								case 'Sun':
+									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, сегодня выходной. =)";
+									break;
+								case 'Mon':
+									$otvet = "[id{$user_id}|{$user_name}-дуц], сегодня только военка первой парой.";
+									break;
+							}
+						}		
 					break;	
 			}
 			$request_params = [
