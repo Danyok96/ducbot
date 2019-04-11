@@ -268,9 +268,10 @@ $app->post('/bot', function() use($app) {
 								case 'Sat':
 									$otvet = "[id{$user_id}|{$user_name}-дуц],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526";
 									break;
-						}		
+								}		
 					break;	
-				}
+						}
+					}
 			$request_params = [
 				//'user_id' => $user_id,
 				'random_id' => 0,
