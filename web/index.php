@@ -198,7 +198,7 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 							switch ($nextday){
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, сегодня выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, выходной. =)";
 									break;
 								case 'Mon':
 									$otvet = "[id{$user_id}|{$user_name}-дуц], сегодня только военка первой парой.";
@@ -240,7 +240,7 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 							switch ($nextday) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, сегодня выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}-дуц], чиль, выходной. =)";
 									break;
 								case 'Mon':
 								if ($nextdate == '15.04.2019') {
