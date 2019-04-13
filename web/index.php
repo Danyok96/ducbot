@@ -274,7 +274,7 @@ $app->post('/bot', function() use($app) {
 					break;	
 						}
 				case 'тест':
-							$otvet = "{sex}";
+							$otvet = "{$sex}";
 							break;		
 					}
 			$request_params = [
