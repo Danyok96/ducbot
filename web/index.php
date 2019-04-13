@@ -60,6 +60,7 @@ $app->post('/bot', function() use($app) {
 			$numofnextweek = date("W", $testnext);
 			$numofnextstudweek = $numofnextweek-5;
 			if ($user_id == 20017026) { $user_name = 'Царь';}
+			$sex = $user_info->response[0]->sex;
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}-дуц] !";
@@ -272,6 +273,9 @@ $app->post('/bot', function() use($app) {
 								}		
 					break;	
 						}
+				case 'тест':
+							$otvet = "{sex}";
+							break;		
 					}
 			$request_params = [
 				//'user_id' => $user_id,
