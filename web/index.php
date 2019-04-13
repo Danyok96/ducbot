@@ -38,6 +38,7 @@ $app->post('/bot', function() use($app) {
 			$peer_id = $data->object->peer_id;
 			$user_resp = [
 				'user_ids' => $user_id,
+				'fields' => 'sex',
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.0'
 			];
