@@ -60,8 +60,20 @@ $app->post('/bot', function() use($app) {
 			$testnext = strtotime($nextdate);
 			$numofnextweek = date("W", $testnext);
 			$numofnextstudweek = $numofnextweek-5;
-			if ($user_id == 20017026) { $user_name = 'Царь';}
 			$sex = $user_info->response[0]->sex;
+			switch ($sex) {
+				case '1':
+					$user_name = '{user_name}-тян';
+					break;
+				case '2':
+					$user_name = '{user_name}-кун';
+					break;
+				case '0':
+					$user_name = '{user_name}-чмо';
+					break;
+			}
+			//-----
+			if ($user_id == 20017026) { $user_name = 'Царь';}
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}-дуц] !";
