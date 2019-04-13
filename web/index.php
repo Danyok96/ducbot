@@ -73,61 +73,61 @@ $app->post('/bot', function() use($app) {
 					break;
 			}
 			//-----
-			//if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
+			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}{$pref}]!";
 					break;
 				case 'дуцкакдела':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, збс, ведь я не учусь.=)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], збс, ведь я не учусь.=)";
 					break;
 				case 'дуцчтоумеешь':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, кидать подгоны, чтобы Даня не агрился.=)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], кидать подгоны, чтобы Даня не агрился.=)";
 					break;
 				case 'дуцктотакойходж':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, нормас чел, иногда сутулый, конечно, но ладно.=)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], нормас чел, иногда сутулый, конечно, но ладно.=)";
 					break;
 				case 'дуцдата':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.";
 					break;
 				case 'дуцвремя':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, {$time}.";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$time}.";
 					break;
 				case 'дуцктотакойфил':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, челик, который проебался с арендой тачки.=)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], челик, который проебался с арендой тачки.=)";
 					break;
 				case 'дуцктотакоймакс':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, заебис чел, битки там, хуё-моё, [id34317520|Krzhprd.] в общем.=)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], заебис чел, битки там, хуё-моё, [id34317520|Krzhprd.] в общем.=)";
 					break;
 				case 'дуцктотакойданя':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, тупо [id20017026|создатель].";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], тупо [id20017026|создатель].";
 					break;
 				case 'дуцктотакаяирина':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, 'чудесная и хорошая'(с) [id201182825|Иринус]. =)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], 'чудесная и хорошая'(с) [id201182825|Иринус]. =)";
 					break;
 				case 'дуцктотакойпетёёёк':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, ну просто максимальный [id14806435|Дуц-танкист], который ещё и братков из группы кинул и перешёл в другую группу...";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], ну просто максимальный [id14806435|Дуц-танкист], который ещё и братков из группы кинул и перешёл в другую группу...";
 					break;
 				case 'дуцктотакойфирст':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, чики-бирики и в [id117803113|чела на BMW]. =)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], чики-бирики и в [id117803113|чела на BMW]. =)";
 					break;
 				case 'дуцктотакойгвоздь':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, просто [id174929520|Doge with the gun]. =)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], просто [id174929520|Doge with the gun]. =)";
 					break;
 				case 'дуцспокиноки':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, бархатной ночи, вы закроете глаза, а моя душа будет сидеть у ваших ног и охранять сны до рассвета, нежно улыбаясь вам. ^_^";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], бархатной ночи, вы закроете глаза, а моя душа будет сидеть у ваших ног и охранять сны до рассвета, нежно улыбаясь вам. ^_^";
 					break;
 				case 'дуцкогдалабы':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref},\nУГИФС:\n15 апреля(первая подгруппа)\n23 апреля(вторая подгруппа)\n21 мая - защита(вторая подгруппа)\n27 мая - защита(первая подгруппа)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nУГИФС:\n15 апреля(первая подгруппа)\n23 апреля(вторая подгруппа)\n21 мая - защита(вторая подгруппа)\n27 мая - защита(первая подгруппа)";
 					break;
 				case 'хейдуц':
-					$otvet = "Чё кого, [id{$user_id}|{$user_name}]{$pref}?";
+					$otvet = "Чё кого, [id{$user_id}|{$user_name}{$pref}]?";
 					break;
 				case 'дуцзаебис':
-					$otvet = "Это по-кайфу, [id{$user_id}|{$user_name}]{$pref}.=)";
+					$otvet = "Это по-кайфу, [id{$user_id}|{$user_name}{$pref}].=)";
 					break;	
 				case 'бунд':
-					$otvet = "[id{$user_id}|{$user_name}]{$pref}, так, блэт. Успокаеваемся!=)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], так, блэт. Успокаеваемся!=)";
 					break;
 				case 'дуцрасписаниенасегодня':
 						if(($numofstudweek % 2) == 0)
@@ -135,39 +135,39 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 							switch ($day) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, сегодня выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
 									break;
 								case 'Mon':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня только военка первой парой.";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
 									break;
 								case 'Tue':
 									if($date == '09.04.2019')
 									{
-										$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня лабы по квантам.";
+										$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы по квантам.";
 									}
 									else
 									{
-										$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, сегодня выходной. =)";
+										$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
 									}
 									break;
 								case 'Wed':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n13:50-15:25 Радиоавтоматика(сем) 526\n15:40-17:15 ЗИС(лек) 417ю\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:50-15:25 Радиоавтоматика(сем) 526\n15:40-17:15 ЗИС(лек) 417ю\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
 									break;
 								case 'Thu':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ЦОС(сем) 502ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ЦОС(сем) 502ю";
 									break;
 								case 'Fri':
 								if ($date == '12.04.2019') 
 								{
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 (изм)ЗИС(лек) 417ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 (изм)ЗИС(лек) 417ю";
 								} 
 								else 
 								{
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
 								}
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л";
 									break;
 							}
 						}
@@ -176,33 +176,33 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 							switch ($day) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, сегодня выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
 									break;
 								case 'Mon':
 								if ($date == '15.04.2019') {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня лабы в п.Орево (первая подгруппа) и военка.=)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы в п.Орево (первая подгруппа) и военка.=)";
 								} else {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня только военка первой парой.";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
 								}
 									break;
 								case 'Tue':
 								if ($date == '23.04.2019') {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня лабы в п.Орево (вторая подгруппа) и военка.=)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы в п.Орево (вторая подгруппа) и военка.=)";
 								} else {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, сегодня выходной. =)";								
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";								
 								}
 									break;
 								case 'Wed':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
 									break;
 								case 'Thu':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ОКЭ(сем) 526\n17:25-19:00 УГиФС(сем) 502ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ОКЭ(сем) 526\n17:25-19:00 УГиФС(сем) 502ю";
 									break;
 								case 'Fri':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526";
 									break;
 							}
 						}
@@ -213,40 +213,40 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 							switch ($nextday){
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";
 									break;
 								case 'Mon':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня только военка первой парой.";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
 									break;
 								case 'Tue':
 									if($nextday == '09.04.2019')
 									{
-										$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня лабы по квантам.";
+										$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы по квантам.";
 									}
 									else
 									{
-										$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, сегодня выходной. =)";
+										$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
 									}
 									break;
 								case 'Wed':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n13:50-15:25 Радиоавтоматика(сем) 526\n15:40-17:15 ЗИС(лек) 417ю\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:50-15:25 Радиоавтоматика(сем) 526\n15:40-17:15 ЗИС(лек) 417ю\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
 									break;
 								case 'Thu':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ЦОС(сем) 502ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ЦОС(сем) 502ю";
 									break;
 								case 'Fri':
 								if ($nextdate == '12.04.2019') 
 								{
 									
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 (изм)ЗИС(лек) 417ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 (изм)ЗИС(лек) 417ю";
 								} 
 								else 
 								{
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
 								}
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л";
 									break;
 								}
 						}
@@ -255,40 +255,40 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 							switch ($nextday) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";
 									break;
 								case 'Mon':
 								if ($nextdate == '15.04.2019') {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня лабы в п.Орево (первая подгруппа) и военка.=)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы в п.Орево (первая подгруппа) и военка.=)";
 								} else {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня только военка первой парой.";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
 								}
 									break;
 								case 'Tue':
 								if ($nextday == '23.04.2019') {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, сегодня лабы в п.Орево (вторая подгруппа) и военка.=)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы в п.Орево (вторая подгруппа) и военка.=)";
 								} else {
-									$otvet = "[id{$user_id}|{$user_name}]{$pref}, чиль, сегодня выходной. =)";								
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";								
 								}
 									break;
 								case 'Wed':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";
 									break;
 								case 'Thu':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ОКЭ(сем) 526\n17:25-19:00 УГиФС(сем) 502ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n12:00-13:35 ЧМ(лек) 502ю\n13:50-15:25 Экономика(лек) 502ю\n15:40-17:15 ОКЭ(сем) 526\n17:25-19:00 УГиФС(сем) 502ю";
 									break;
 								case 'Fri':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}]{$pref},\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526";
 									break;
 								}	
 						}
 					break;	
-				case 'тест':
-							$otvet = "{$sex}";
-							break;		
+				// case 'тест':
+				// 			$otvet = "{$sex}";
+				// 			break;		
 					}
 			$request_params = [
 				//'user_id' => $user_id,
