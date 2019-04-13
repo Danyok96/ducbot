@@ -59,6 +59,7 @@ $app->post('/bot', function() use($app) {
 			$testnext = strtotime($nextdate);
 			$numofnextweek = date("W", $testnext);
 			$numofnextstudweek = $numofnextweek-5;
+			if ($user_id == 20017026) { $user_name = 'Царь'}
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}-дуц] !";
