@@ -73,10 +73,10 @@ $app->post('/bot', function() use($app) {
 					break;
 			}
 			//-----
-			if ($user_id == 20017026) { $user_name = 'Царь';$pref = '';}
+			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
 			switch ($message) {
 				case 'приветдуц':
-					$otvet = "Привет, [id{$user_id}|{$user_name}]{$pref}!";
+					$otvet = "Привет, [id{$user_id}|{$user_name}{$pref}]!";
 					break;
 				case 'дуцкакдела':
 					$otvet = "[id{$user_id}|{$user_name}]{$pref}, збс, ведь я не учусь.=)";
