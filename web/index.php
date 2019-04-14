@@ -286,6 +286,9 @@ $app->post('/bot', function() use($app) {
 								}	
 						}
 					break;	
+				case 'дуцтрек':
+						$media = "audio{peer_id}_456239320";
+					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
 				// 			break;		
@@ -295,6 +298,7 @@ $app->post('/bot', function() use($app) {
 				'random_id' => 0,
 				'peer_id' => $peer_id,
 				'message' => $otvet,
+				'attachment' => $media,
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.92'
 			];
