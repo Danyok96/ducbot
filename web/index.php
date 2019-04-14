@@ -289,13 +289,13 @@ $app->post('/bot', function() use($app) {
 				case 'дуцтрек':
 						$media = "audio20017026_456239320";
 					break;
+				case 'дуцфил':
+						$media = "photo20017026_456240516";
+					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
 				// 			break;		
 					}
-				case 'дуцфил':
-						$media = "photo20017026_456240516";
-					break;
 			$request_params = [
 				//'user_id' => $user_id,
 				'random_id' => 0,
