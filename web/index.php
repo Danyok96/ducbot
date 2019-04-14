@@ -289,6 +289,15 @@ $app->post('/bot', function() use($app) {
 				case 'дуцтрек':
 						$media = "audio20017026_456239320";
 					break;
+				case 'дуцответсоветчикам':
+					switch ($sex) {
+						case '1':
+							$otvet = "[id{$user_id}|{$user_name}{$pref}] их отца в кино водила...";
+						break;
+						case '2':
+							$otvet = "Вертел [id{$user_id}|{$user_name}{$pref}] их на своём шампуре...";
+						break;
+					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
 				// 			break;		
