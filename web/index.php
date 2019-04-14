@@ -287,7 +287,7 @@ $app->post('/bot', function() use($app) {
 						}
 					break;	
 				case 'дуцтрек':
-						$media = "audio{peer_id}_456239320";
+						$media = "audio{$peer_id}_456239320";
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
