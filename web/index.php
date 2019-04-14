@@ -293,6 +293,9 @@ $app->post('/bot', function() use($app) {
 				// 			$otvet = "{$sex}";
 				// 			break;		
 					}
+				case 'дуцфил':
+						$media = "photo20017026_456240516";
+					break;
 			$request_params = [
 				//'user_id' => $user_id,
 				'random_id' => 0,
