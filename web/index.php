@@ -300,6 +300,7 @@ $app->post('/bot', function() use($app) {
 						case '0':
 							$otvet = "[id{$user_id}|{$user_name}{$pref}] их отца в кино водила...";
 						break;
+					}
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
