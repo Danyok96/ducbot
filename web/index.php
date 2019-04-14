@@ -216,16 +216,16 @@ $app->post('/bot', function() use($app) {
 									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";
 									break;
 								case 'Mon':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], только военка первой парой.";
 									break;
 								case 'Tue':
 									if($nextday == '09.04.2019')
 									{
-										$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы по квантам.";
+										$otvet = "[id{$user_id}|{$user_name}{$pref}], лабы по квантам.";
 									}
 									else
 									{
-										$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
+										$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";
 									}
 									break;
 								case 'Wed':
@@ -259,16 +259,16 @@ $app->post('/bot', function() use($app) {
 									break;
 								case 'Mon':
 								if ($nextdate == '15.04.2019') {
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы в п.Орево (первая подгруппа) и военка.=)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],лабы в п.Орево (первая подгруппа) и военка.=)";
 								} else {
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], только военка первой парой.";
 								}
 									break;
 								case 'Tue':
 								if ($nextday == '23.04.2019') {
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня лабы в п.Орево (вторая подгруппа) и военка.=)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], лабы в п.Орево (вторая подгруппа) и военка.=)";
 								} else {
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";								
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";								
 								}
 									break;
 								case 'Wed':
