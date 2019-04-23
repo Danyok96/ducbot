@@ -74,6 +74,8 @@ $app->post('/bot', function() use($app) {
 			}
 			//-----
 			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
+			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '';}
+			if ($user_id == 134572907) { $user_name = "Agent Kuz'mich";$pref = '';}
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}{$pref}]!";
