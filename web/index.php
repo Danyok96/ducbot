@@ -100,7 +100,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], заебис чел, битки там, хуё-моё, [id34317520|Krzhprd.] в общем.=)";
 					break;
 				case 'дуцктотакойданя':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], тупо [id20017026|создатель].";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], тупо [id20017026|создатель DUC'a].";
 					break;
 				case 'дуцктотакаяирина':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], 'чудесная и хорошая'(с) [id201182825|Иринус]. =)";
