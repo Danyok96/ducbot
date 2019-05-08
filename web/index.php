@@ -293,10 +293,6 @@ $app->post('/bot', function() use($app) {
 									break;
 								}	
 								if ($nextdate == '01.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($nextdate == '02.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($nextdate == '03.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($nextdate == '04.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($nextdate == '05.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 								if ($nextdate == '09.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], с днём победы! Чиль, выходной. =)";}
 						}
 					break;	
