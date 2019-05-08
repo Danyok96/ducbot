@@ -211,8 +211,7 @@ $app->post('/bot', function() use($app) {
 								if ($date == '02.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 								if ($date == '03.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 								if ($date == '04.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($date == '05.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($date == '09.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], с днём победы! Чиль, выходной. =)";}
+								if ($date == '09.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 						}
 					break;
 				case 'дуцрасписаниеназавтра':
