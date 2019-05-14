@@ -131,6 +131,9 @@ $app->post('/bot', function() use($app) {
 				case 'бунд':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], так, блэт. Успокаеваемся!=)";
 					break;
+				case 'дуцоблако':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], \nhttps://cloud.mail.ru/public/NAzt/FJpjdhFpZ";
+					break;
 				case 'дуцрасписаниенасегодня':
 						if(($numofstudweek % 2) == 0)
 						{
