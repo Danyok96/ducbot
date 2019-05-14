@@ -213,6 +213,7 @@ $app->post('/bot', function() use($app) {
 								if ($date == '04.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 						}
 								if ($date == '09.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
+								if ($date == '15.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:00 лаба по ЦОСу\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";}
 					break;
 				case 'дуцрасписаниеназавтра':
 						if(($numofnextstudweek % 2) == 0)
@@ -292,7 +293,9 @@ $app->post('/bot', function() use($app) {
 									break;
 								}	
 								if ($nextdate == '01.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($nextdate == '09.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], с днём победы! Чиль, выходной. =)";}
+								if ($nextdate == '15.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:00 лаба по ЦОСу\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";}
+
+								
 						}
 					break;	
 				case 'дуцтрек':
