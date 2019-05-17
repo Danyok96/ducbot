@@ -134,6 +134,9 @@ $app->post('/bot', function() use($app) {
 				case 'дуцоблако':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], \nhttps://cloud.mail.ru/public/NAzt/FJpjdhFpZ";
 					break;
+				case 'дуцрасписаниеэкзаменов':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], \n13 июня 9:00 ОКЭ 1039л\n18 июня 9:00 РА 526\n22 июня 14:00 ЦОС 1039л\n26 июня 9:00 УГиФС 526";
+					break;
 				case 'дуцрасписаниенасегодня':
 						if(($numofstudweek % 2) == 0)
 						{
