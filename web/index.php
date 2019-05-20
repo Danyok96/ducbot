@@ -121,7 +121,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцкогдалабы':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nУГИФС:\n21 мая - защита(вторая подгруппа)\n27 мая - защита(первая подгруппа)\n";
-					//$media = "photo180470421_456239020";
+					$media = "photo-180470421_456239020";
 					break;
 				case 'хейдуц':
 					$otvet = "Чё кого, [id{$user_id}|{$user_name}{$pref}]?";
