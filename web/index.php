@@ -135,6 +135,9 @@ $app->post('/bot', function() use($app) {
 				case 'дуцоблако':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], \nhttps://cloud.mail.ru/public/NAzt/FJpjdhFpZ";
 					break;
+				case 'дуцоблакопомикропроцессорам':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], \nКоновальцев Антон Вячеславович\nhttps://cloud.mail.ru/public/937498eb7bb7/%D0%9C%D0%B8%D0%BA%D1%80%D0%BE%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80%D0%BD%D1%8B%D0%B5%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B/";
+					break;
 				case 'дуцрасписаниеэкзаменов':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], \n13 июня 9:00 ОКЭ 1039л\n18 июня 9:00 РА 526\n22 июня 14:00 ЦОС 1039л\n26 июня 9:00 УГиФС 526";
 					break;
