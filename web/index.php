@@ -83,6 +83,9 @@ $app->post('/bot', function() use($app) {
 				case 'дуцкакдела':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], збс, ведь я не учусь.=)";
 					break;
+				case 'дуцчиилинечи':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], Чи,да!";
+					break;
 				case 'дуцчтоумеешь':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], кидать подгоны, чтобы Даня не агрился.=)";
 					break;
