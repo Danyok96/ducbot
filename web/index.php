@@ -331,7 +331,7 @@ $app->post('/bot', function() use($app) {
 					}
 					break;
 				case 'дуцоблакосереги':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw"
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
