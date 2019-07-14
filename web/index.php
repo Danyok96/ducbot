@@ -337,6 +337,14 @@ $app->post('/bot', function() use($app) {
 				// 			$otvet = "{$sex}";
 				// 			break;		
 					}
+			//-------
+			if (strpos($message, 'дуцпосчитай') !== false) // именно через жесткое сравнение
+			{
+    			echo 'Найдено';
+			} else {
+    			echo 'Не найдено';
+			}
+			//-------
 			$request_params = [
 				//'user_id' => $user_id,
 				'random_id' => 0,
