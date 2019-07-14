@@ -46,8 +46,11 @@ $app->post('/bot', function() use($app) {
 			$user_name = $user_info->response[0]->first_name;
 			$message = $data->object->text;
 			$message = mb_strtolower($message);
+			$message_to_calc = $message;
 			$dots = array(".",",","?"," ");
+			$dots_to_calc = array(",","?"," ");
 			$message = str_replace($dots, "", $message);
+			$message_to_calc = str_replace($dots_to_calc, "", $message_to_calc)
 			$date = date("d.m.Y");
 			$day = date("D");
 			$time = date("H:i");
@@ -338,16 +341,16 @@ $app->post('/bot', function() use($app) {
 				// 			break;		
 					}
 			//-------
-			if (strpos($message, 'дуцпосчитай') !== false) // именно через жесткое сравнение
+			if (strpos($message_to_calc, 'дуцпосчитай') !== false) // именно через жесткое сравнение
 			{
-				$message = str_replace('дуцпосчитай', '', $message);
+				$message_to_calc = str_replace('дуцпосчитай', '', $message_to_calc);
 
-				 $formula = $message;
+				 $formula = $message_to_calc;
 				 $precision = 2; // Number of digits after the decimal point
 				 try {
 				     $parser = new FormulaParser($formula, $precision);
 				     $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
-				   	if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
+				   	if($result['1'] !== 'Syntax error'){$otvet = 'Ответ: '. $result['1'];};
 				  	if($result['1'] !== 'Invalid character'){$otvet = 'Ответ: '. $result['1'];};
 
 			    
