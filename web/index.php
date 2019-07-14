@@ -6,7 +6,7 @@ require('../vendor/autoload.php');
 $app = new Silex\Application();
 $app['debug'] = true;
 
-//use FormulaParser\FormulaParser;
+use FormulaParser\FormulaParser;
 
 // Register the monolog logging service
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
@@ -344,13 +344,16 @@ $app->post('/bot', function() use($app) {
 
 				 $formula = $message;
 				 $precision = 2; // Number of digits after the decimal point
-				 $otvet = $formula;
-				// try {
-				//    $parser = new FormulaParser($formula, $precision);
-				//    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
-				//  	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
-				//  	if($result['1'] !== 'Invalid character'){$otvet = 'Ответ: '. $result['1'];};
-				//  	$otvet = $result;}
+				 try {
+				     $parser = new FormulaParser($formula, $precision);
+				     $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
+				   	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
+				  	if($result['1'] !== 'Invalid character'){$otvet = 'Ответ: '. $result['1'];};
+
+			    
+				 } catch (\Exception $e) {
+				      $otvet = 'Неа...';
+				 }
 			} else {
     			//$otvet =  'Не найдено';
 			}
