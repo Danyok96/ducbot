@@ -340,9 +340,9 @@ $app->post('/bot', function() use($app) {
 			//-------
 			if (strpos($message, 'дуцпосчитай') !== false) // именно через жесткое сравнение
 			{
-    			echo 'Найдено';
+    			$otvet =  'Найдено';
 			} else {
-    			echo 'Не найдено';
+    			$otvet =  'Не найдено';
 			}
 			//-------
 			$request_params = [
