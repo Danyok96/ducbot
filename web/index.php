@@ -50,7 +50,7 @@ $app->post('/bot', function() use($app) {
 			$dots = array(".",",","?"," ");
 			$dots_to_calc = array(",","?"," ");
 			$message = str_replace($dots, "", $message);
-			$message_to_calc = str_replace($dots_to_calc, "", $message_to_calc)
+			$message_to_calc = str_replace($dots_to_calc, "", $message_to_calc);
 			$date = date("d.m.Y");
 			$day = date("D");
 			$time = date("H:i");
