@@ -342,7 +342,7 @@ $app->post('/bot', function() use($app) {
 			{
     			$otvet =  'Найдено';
 			} else {
-    			$otvet =  'Не найдено';
+    			//$otvet =  'Не найдено';
 			}
 			//-------
 			$request_params = [
