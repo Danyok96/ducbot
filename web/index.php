@@ -340,7 +340,8 @@ $app->post('/bot', function() use($app) {
 			//-------
 			if (strpos($message, 'дуцпосчитай') !== false) // именно через жесткое сравнение
 			{
-    			$otvet =  'Найдено';
+				$message = substr($message, 11);
+    			$otvet =  $message;
 			} else {
     			//$otvet =  'Не найдено';
 			}
