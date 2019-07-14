@@ -342,14 +342,14 @@ $app->post('/bot', function() use($app) {
 			{
 				$message = str_replace('дуцпосчитай', '', $message);
 
-				$formula = $message;
-				$precision = 2; // Number of digits after the decimal point
-				try {
-				   $parser = new FormulaParser($formula, $precision);
-				   $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
-				 	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
-				 	if($result['1'] !== 'Invalid character'){$otvet = 'Ответ: '. $result['1'];};
-				 	$otvet = $result;}
+				// $formula = $message;
+				// $precision = 2; // Number of digits after the decimal point
+				// try {
+				//    $parser = new FormulaParser($formula, $precision);
+				//    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
+				//  	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
+				//  	if($result['1'] !== 'Invalid character'){$otvet = 'Ответ: '. $result['1'];};
+				//  	$otvet = $result;}
 			} else {
     			//$otvet =  'Не найдено';
 			}
