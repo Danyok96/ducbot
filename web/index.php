@@ -349,7 +349,7 @@ $app->post('/bot', function() use($app) {
 				   $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
 				 	// if($result['1'] !== 'Syntax error'){$request_params['message'] = 'Ответ: '. $result['1'];};
 				 	if($result['1'] !== 'Invalid character'){$otvet = 'Ответ: '. $result['1'];};
-				 	$otvet = $result;
+				 	$otvet = $result;}
 			} else {
     			//$otvet =  'Не найдено';
 			}
