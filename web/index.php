@@ -342,8 +342,9 @@ $app->post('/bot', function() use($app) {
 			{
 				$message = str_replace('дуцпосчитай', '', $message);
 
-				// $formula = $message;
-				// $precision = 2; // Number of digits after the decimal point
+				 $formula = $message;
+				 $precision = 2; // Number of digits after the decimal point
+				 $otvet = $formula;
 				// try {
 				//    $parser = new FormulaParser($formula, $precision);
 				//    $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
