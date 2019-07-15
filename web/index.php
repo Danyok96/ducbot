@@ -351,8 +351,8 @@ $app->post('/bot', function() use($app) {
 				     $parser = new FormulaParser($formula, $precision);
 				     $result = $parser->getResult(); // [0 => 'done', 1 => 16.38]
 				     $input_formula = $parser->getFormula();
-				   	if($result['1'] !== 'Syntax error'){$otvet = $input_formula."\nОтвет: ". $result['1'];};
-				  	if($result['1'] !== 'Invalid character'){$otvet = $input_formula."\nОтвет: ". $result['1'];};
+				   	if($result['1'] !== 'Syntax error'){$otvet = "[id{$user_id}|{$user_name}{$pref}]\nВыражение: ".$input_formula."\nОтвет: ". $result['1'];};
+				  	if($result['1'] !== 'Invalid character'){$otvet = "[id{$user_id}|{$user_name}{$pref}]\nВыражение: ".$input_formula."\nОтвет: ". $result['1'];};
 
 			    
 				 } catch (\Exception $e) {
