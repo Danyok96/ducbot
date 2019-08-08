@@ -375,7 +375,7 @@ $app->post('/bot', function() use($app) {
 
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 
-			return 'Ok!';
+			return 'ok';
 			break;
 	}
 	return "Not Ok!";
