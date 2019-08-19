@@ -337,10 +337,10 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
 					break;
 				case 'дуцтест':
-					$nowdate = strtotime(date(d.m.Y));
-					$dietime = strtotime("2 September 2019");
-					$differ = round(($dietime - $nowdate)/36000,1);
-					$otvet = $differ;
+					$now = new Datatime();
+					$date_1 = Datatime::createFromFormat("Y-m-d H:i", '2019-09-12 08:45');
+					$interval = $now->diff($date_1);
+					$otvet = $interval->y, $interval->d, $interval->h, $interval->i;
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
