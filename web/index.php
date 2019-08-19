@@ -338,8 +338,8 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцтест':
 					$dietime = strtotime("2 September 2019");
-					$differ = $dietime - $date;
-					$otvet = date("D", $differ);
+					$differ = round(($dietime - $date)/36000,1);
+					$otvet = $differ;
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
