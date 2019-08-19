@@ -336,7 +336,7 @@ $app->post('/bot', function() use($app) {
 				case 'дуцоблакосереги':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
 					break;
-				case 'дуцтест':
+				case 'дуцсколькоосталось':
 					$otvet = time_elapsed_string('2019-09-02 08:45:00', true);
 					break;
 				// case 'тест':
@@ -410,6 +410,6 @@ function time_elapsed_string($datetime, $full = false)
     }
 
     if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ещё' : 'сейчас';
+    return $string ? implode(', ', $string) . ' ещё.' : 'сейчас.';
 }
 $app->run();
