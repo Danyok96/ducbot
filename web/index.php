@@ -336,6 +336,10 @@ $app->post('/bot', function() use($app) {
 				case 'дуцоблакосереги':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
 					break;
+				case 'дуцтест':
+					$dietime = strtotime("2 September 2019");
+					$otvet = $dietime - $date;
+					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
 				// 			break;		
