@@ -318,7 +318,14 @@ $app->post('/bot', function() use($app) {
 						}
 					break;	
 				case 'дуцтрек':
-						$media = "audio20017026_456239320";
+					// $rnd = rand(1,10);
+					// switch ($rnd) {
+					// 	case '1':
+					// 		# code...
+					// 		break;
+					// }
+						//$media = "audio20017026_456239320";
+				$media = "audio20017026_456239443";
 					break;
 				case 'дуцответсоветчикам':
 					switch ($sex) {
