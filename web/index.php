@@ -318,14 +318,51 @@ $app->post('/bot', function() use($app) {
 						}
 					break;	
 				case 'дуцтрек':
-					// $rnd = rand(1,10);
-					// switch ($rnd) {
-					// 	case '1':
-					// 		# code...
-					// 		break;
-					// }
+					$rnd = rand(1,10);
+					switch ($rnd) {
+						case '1':
+						//Sayonara детка
+							$media = "audio20017026_456239443";
+						break;
+						case '2':
+						//Все хотят меня поцеловать
+							$media = "audio20017026_456239320";
+						break;
+						case '3':
+						//Виски кола
+							$media = "audio20017026_456239433";
+						break;
+						case '4':
+						//Трахаюсь
+							$media = "audio20017026_456239413";
+						break;
+						case '5':
+						//Личка
+							$media = "audio20017026_456239412";
+						break;
+						case '6':
+						//Лол
+							$media = "audio20017026_456239392";
+						break;
+						case '7':
+						//The exodus
+							$media = "audio20017026_456239464";
+						break;
+						case '8':
+						//лбтд
+							$media = "audio20017026_456239465";
+						break;
+						case '9':
+						//20К
+							$media = "audio20017026_456239428";
+						break;
+						case '10':
+						//Между нами секс
+							$media = "audio20017026_456239451";
+						break;
+					}
 						//$media = "audio20017026_456239320";
-				$media = "audio20017026_456239443";
+
 					break;
 				case 'дуцответсоветчикам':
 					switch ($sex) {
