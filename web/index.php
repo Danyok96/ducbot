@@ -337,10 +337,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
 					break;
 				case 'дуцтест':
-					$now = new Datatime();
-					$date_1 = Datatime::createFromFormat("Y-m-d H:i", '2019-09-12 08:45');
-					$interval = $now->diff($date_1);
-					$otvet = $interval->y, $interval->d, $interval->h, $interval->i;
+					$otvet = time_elapsed_string('2019-09-02 08:45:00');
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
@@ -386,5 +383,33 @@ $app->post('/bot', function() use($app) {
 	}
 	return "Not Ok!";
 });
+function time_elapsed_string($datetime, $full = false) 
+{
+    $now = new DateTime;
+    $ago = new DateTime($datetime);
+    $diff = $now->diff($ago);
 
+    $diff->w = floor($diff->d / 7);
+    $diff->d -= $diff->w * 7;
+
+    $string = array(
+        'y' => 'year',
+        'm' => 'month',
+        'w' => 'week',
+        'd' => 'day',
+        'h' => 'hour',
+        'i' => 'minute',
+        's' => 'second',
+    );
+    foreach ($string as $k => &$v) {
+        if ($diff->$k) {
+            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+        } else {
+            unset($string[$k]);
+        }
+    }
+
+    if (!$full) $string = array_slice($string, 0, 1);
+    return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
 $app->run();
