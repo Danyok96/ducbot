@@ -339,7 +339,8 @@ $app->post('/bot', function() use($app) {
 				case 'дуцсколькоосталось':
 					$otvet = time_elapsed_string('2019-09-02 08:45:00', true);
 					break;
-				case 'дуцрандом'
+				case 'дуцрандом':
+					//$rnd = rand(1,100);
 					$otvet = rand(1,100);
 					break;
 				// case 'тест':
