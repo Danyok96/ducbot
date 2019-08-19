@@ -337,8 +337,9 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
 					break;
 				case 'дуцтест':
+					$nowdate = strtotime(date(d.m.Y));
 					$dietime = strtotime("2 September 2019");
-					$differ = round(($dietime - $date)/36000,1);
+					$differ = round(($dietime - $nowdate)/36000,1);
 					$otvet = $differ;
 					break;
 				// case 'тест':
