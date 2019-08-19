@@ -338,7 +338,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцтест':
 					$dietime = strtotime("2 September 2019");
-					$otvet = $dietime - $date;
+					$otvet = $dietime;
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
