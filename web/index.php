@@ -337,7 +337,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
 					break;
 				case 'дуцтест':
-					$otvet = time_elapsed_string('2019-09-02 08:45:00');
+					$otvet = time_elapsed_string('2019-09-02 08:45:00', true);
 					break;
 				// case 'тест':
 				// 			$otvet = "{$sex}";
