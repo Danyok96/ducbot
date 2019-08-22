@@ -441,13 +441,13 @@ function time_elapsed_string($datetime, $full = false)
     $diff->d -= $diff->w * 7;
 
     $string = array(
-        'y' => 'лет',
-        'm' => 'месяцев',
-        'w' => 'недель',
-        'd' => 'дней',
-        'h' => 'часов',
-        'i' => 'минут',
-        's' => 'секунд',
+        'y' => 'Лет',
+        'm' => 'Месяцев',
+        'w' => 'Недель',
+        'd' => 'Дней',
+        'h' => 'Часов',
+        'i' => 'Минут',
+        's' => 'Секунд',
     );
     foreach ($string as $k => &$v) {
         if ($diff->$k) {
@@ -458,6 +458,6 @@ function time_elapsed_string($datetime, $full = false)
     }
 
     if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(";\n ", $string) . ' ещё.' : 'сейчас.';
+    return $string ? implode(";\n", $string) . ' ещё.' : 'сейчас.';
 }
 $app->run();
