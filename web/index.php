@@ -164,7 +164,7 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 							switch ($day) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =) знаменатель";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
 									break;
 								case 'Mon':
 									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
@@ -196,7 +196,7 @@ $app->post('/bot', function() use($app) {
 								}
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\nзнаменатель";
 									break;
 							}
 						}
@@ -205,7 +205,7 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 							switch ($day) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)числитель";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
 									break;
 								case 'Mon':
 								if ($date == '15.04.2019') {
@@ -231,7 +231,7 @@ $app->post('/bot', function() use($app) {
 									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526\nчислитель";
 									break;
 							}
 								if ($date == '01.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
