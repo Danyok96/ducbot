@@ -97,8 +97,8 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], нормас чел, иногда сутулый, конечно, но ладно.=)";
 					break;
 				case 'дуцдата':
-
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{strftime("%d",time())}";
+					$ductime = strftime("%d",time());
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$ductime}";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$time}.";
