@@ -56,7 +56,7 @@ $app->post('/bot', function() use($app) {
 			$time = date("H:i");
 			$test = strtotime($date);
 			$numofweek = date("W",$test);
-			$numofstudweek = $numofweek-30;
+			$numofstudweek = $numofweek-35;
 			$next_date = strtotime("+1 day");
 			$nextdate = date("d.m.Y", $next_date);
 			$nextday = date("D", $next_date);
