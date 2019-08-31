@@ -1,5 +1,4 @@
 <?php
-setlocale(LC_ALL, 'ru_RU','ru_RU.UTF-8','ru','russian');
 define('TIMEZONE', 'Europe/Moscow');
 date_default_timezone_set(TIMEZONE);
 require('../vendor/autoload.php');
@@ -76,6 +75,16 @@ $app->post('/bot', function() use($app) {
 					$pref = '-чмо';
 					break;
 			}
+			$arr_of_day = [
+					'Воскресенье',
+					'Понедельник',
+					'Вторник',
+					'Среда',
+					'Четверг',
+				  	'Пятница',
+				  	'Суббота'
+				];
+			$day_ru = date('w');
 			//-----
 			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
 			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '-тян';}
@@ -98,8 +107,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцдата':
 					$ductime = strftime("%A",time());
-					$loc_ru = setlocale(LC_ALL, 'ru_RU','ru_RU.UTF-8','ru','russian');
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$ductime}\n'{$loc_ru}'";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$arr_of_day[$day_ru]}";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$time}.";
