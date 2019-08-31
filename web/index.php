@@ -85,7 +85,8 @@ $app->post('/bot', function() use($app) {
 				  	'Суббота'
 				];
 			$day_ru = date('w');
-			$day_ru_next = date('w+1');
+			$day_ru_next = date('w')+1;
+			if($day_ru_next == '7'){$day_ru_next = '0';}
 			//-----
 			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
 			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '-тян';}
