@@ -196,7 +196,7 @@ $app->post('/bot', function() use($app) {
 								}
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\nзнаменатель";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
 									break;
 							}
 						}
@@ -231,7 +231,7 @@ $app->post('/bot', function() use($app) {
 									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n10:15-11:50 УГиФС(лек) 502ю\n12:00-13:35 УГиФС(лек) 502ю\n13:50-15:25 МиСВСВЧПсБО(лек) 417ю\n15:40-17:15 Радиоавтоматика(лек) 417ю";
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л\n12:00-13:35 ЧМ(сем) 526\nчислитель";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
 									break;
 							}
 								if ($date == '01.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
