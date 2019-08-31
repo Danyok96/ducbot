@@ -99,7 +99,7 @@ $app->post('/bot', function() use($app) {
 				case 'дуцдата':
 					$ductime = strftime("%A",time());
 					$loc_ru = setlocale(LC_ALL, 'ru_RU','ru_RU.UTF-8','ru','russian');
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$ductime}\n'$loc_ru'";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$ductime}\n'{$loc_ru}'";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$time}.";
