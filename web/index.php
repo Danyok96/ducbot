@@ -1,4 +1,5 @@
 <?php
+setlocale(LC_ALL, 'ru_RU','ru_RU.UTF-8','ru','russian');
 define('TIMEZONE', 'Europe/Moscow');
 date_default_timezone_set(TIMEZONE);
 require('../vendor/autoload.php');
@@ -96,7 +97,8 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], нормас чел, иногда сутулый, конечно, но ладно.=)";
 					break;
 				case 'дуцдата':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$day}";
+
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{strftime(%d,time())}";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$time}.";
