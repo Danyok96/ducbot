@@ -107,7 +107,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцдата':
 					$ductime = strftime("%A",time());
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$arr_of_day[$day_ru]}";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$arr_of_day[$day_ru]}.";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$time}.";
@@ -158,13 +158,13 @@ $app->post('/bot', function() use($app) {
 				case 'дуцсписоккоманд':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], \nдуц когда лабы\nдуц облако\nдуц облако Сереги\nдуц облако по микропроцессорам\nдуц расписание экзаменов\nдуц расписание на сегодня\nдуц расписание на завтра\nдуц посчитай...\n⚠Операторы: +, -, *, /, ^\n⚠Разделитель целого '.'\n⚠Константы: pi, e, Inf\n⚠Функции: sqrt, abs, sin, cos, tan, log, exp\nОстальные команды пасхальные.=)";
 					break;	
-				case 'дуцрасписаниенасегодня1':
+				case 'дуцрасписаниенасегодня':
 						if(($numofstudweek % 2) == 0)
 						{
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 							switch ($day) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =) знаменатель";
 									break;
 								case 'Mon':
 									$otvet = "[id{$user_id}|{$user_name}{$pref}], сегодня только военка первой парой.";
@@ -205,7 +205,7 @@ $app->post('/bot', function() use($app) {
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 							switch ($day) {
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, сегодня выходной. =)числитель";
 									break;
 								case 'Mon':
 								if ($date == '15.04.2019') {
