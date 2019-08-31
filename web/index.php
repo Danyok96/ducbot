@@ -85,6 +85,7 @@ $app->post('/bot', function() use($app) {
 				  	'Суббота'
 				];
 			$day_ru = date('w');
+			$day_ru_next = date('w+1');
 			//-----
 			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
 			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '-тян';}
@@ -234,13 +235,13 @@ $app->post('/bot', function() use($app) {
 								if ($date == '09.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 								if ($date == '15.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:00 лаба по ЦОСу 934л\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";}
 					break;
-				case 'дуцрасписаниеназавтра1':
+				case 'дуцрасписаниеназавтра':
 						if(($numofnextstudweek % 2) == 0)
 						{
     							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 							switch ($nextday){
 								case 'Sun':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
 									break;
 								case 'Mon':
 									$otvet = "[id{$user_id}|{$user_name}{$pref}], только военка первой парой.";
@@ -273,7 +274,7 @@ $app->post('/bot', function() use($app) {
 								}
 									break;
 								case 'Sat':
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\n08:30-10:05 МСиСЦОС(лек) 1146л\n10:15-11:50 ЦОС(лек) 1146л";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
 									break;
 								}
 						}
