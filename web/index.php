@@ -379,9 +379,12 @@ $app->post('/bot', function() use($app) {
 					//$rnd = rand(1,100);
 					$otvet = rand(1,100);
 					break;
-				case 'тест':
-				 	$media = "photo-180470421_456239020";
-				 	break;		
+				// case 'тест':
+				//  	$media = "photo-180470421_456239020";
+				//  	break;	
+				case 'дуцрасписание':
+					$media = "photo-180470421_457239021";
+					break;	
 					}
 			//-------
 			if (strpos($message_to_calc, 'дуцпосчитай') !== false) // именно через жесткое сравнение
