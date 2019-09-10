@@ -369,8 +369,9 @@ $app->post('/bot', function() use($app) {
 						break;
 					}
 					break;
+				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/Q4kNHFmXDPHHLw";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],https://yadi.sk/d/zkdaamG-Ol-sjg";
 					break;
 				// case 'дуцсколькоосталось':
 				// 	$otvet = time_elapsed_string('2019-09-02 15:40:00', true);
