@@ -109,7 +109,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцдата':
 					$ductime = strftime("%A",time());
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$date}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.\n{$arr_of_day[$day_ru]}.";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\n{$date},{$arr_of_day[$day_ru]}.\nНеделя: {$numofweek}.\nУчебная неделя: {$numofstudweek}.\nЗавтра: {$nextdate}.";
 					break;
 				case 'дуцвремя':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], {$time}.";
