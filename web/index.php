@@ -91,6 +91,7 @@ $app->post('/bot', function() use($app) {
 			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
 			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '-тян';}
 			if ($user_id == 134572907) { $user_name = "Agent Kuz'mich";$pref = '';}
+			if ($user_id == 346654275) { $user_name = 'Фил';$pref = '';}
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}{$pref}]!";
@@ -391,6 +392,9 @@ $app->post('/bot', function() use($app) {
 				//  	break;	
 				case 'дуцрасписание':
 					$media = "photo-180470421_457239021";
+					break;
+				case 'дуцдуц':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
 					break;	
 					}
 			//-------
