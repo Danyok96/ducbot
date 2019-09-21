@@ -398,7 +398,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
 					break;
 				case '':
-					if ($attachments_type == 'audio_message') {
+					if ($attachments_type === 'audio_message') {
 						$otvet = "Аудио дорожка.";
 					} else {
 						$otvet = "hz";
