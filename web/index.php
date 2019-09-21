@@ -45,6 +45,7 @@ $app->post('/bot', function() use($app) {
 			$user_info = json_decode(file_get_contents('https://api.vk.com/method/users.get?' . http_build_query($user_resp)));
 			$user_name = $user_info->response[0]->first_name;
 			$message = $data->object->text;
+			$attachments_type = $data->object->attachments->type;
 			$message = mb_strtolower($message);
 			$message_to_calc = $message;
 			$dots = array(".",",","?"," ");
@@ -92,6 +93,7 @@ $app->post('/bot', function() use($app) {
 			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '-тян';}
 			if ($user_id == 134572907) { $user_name = "Agent Kuz'mich";$pref = '';}
 			if ($user_id == 346654275) { $user_name = 'Фил';$pref = '';}
+			if ($attachments_type == "audio_message"){$otvet = "Аудио дорожка.";}
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}{$pref}]!";
