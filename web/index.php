@@ -401,7 +401,7 @@ $app->post('/bot', function() use($app) {
 					if ($attachments_type == "audio_message") {
 						$otvet = "Аудио дорожка.";
 					} else {
-						$otvet = "hz";
+						$otvet = "{$attachments_type}";
 					}
 					break;	
 					}
