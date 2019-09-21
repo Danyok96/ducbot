@@ -399,7 +399,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case '':
 					if ($attachments_type == "audio_message") {
-						$voice_link_mp = $data->object->attachments[0]->link_mp3;
+						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
 						$otvet = "Ссылка на запись:\n{$voice_link_mp}";
 					} else {
 						//$otvet = "{$attachments_type}";
