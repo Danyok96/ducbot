@@ -45,7 +45,7 @@ $app->post('/bot', function() use($app) {
 			$user_info = json_decode(file_get_contents('https://api.vk.com/method/users.get?' . http_build_query($user_resp)));
 			$user_name = $user_info->response[0]->first_name;
 			$message = $data->object->text;
-			$attachments_type = $data->object->attachments->type;
+			$attachments_type = $data->object->attachments->response[0]->type;
 			$message = mb_strtolower($message);
 			$message_to_calc = $message;
 			$dots = array(".",",","?"," ");
