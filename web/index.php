@@ -400,7 +400,7 @@ $app->post('/bot', function() use($app) {
 				case '':
 					if ($attachments_type == "audio_message") {
 						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
-						$otvet = "Ссылка на запись:\n{$voice_link_mp}";
+						//$otvet = "Ссылка на запись:\n{$voice_link_mp}";
 
 						$witRoot = "https://api.wit.ai/speech?";
 						$witVersion = "20170307";
@@ -418,6 +418,7 @@ $app->post('/bot', function() use($app) {
 						$server_output = curl_exec ($ch); //call the URL and store the data in $server_output
 
 						curl_close ($ch);  //close the connection
+						$otvet = "{$server_output->_text}";
 
 						//-----
 					} else {
