@@ -427,7 +427,7 @@ $app->post('/bot', function() use($app) {
 						$res = curl_exec($ch);
 						curl_close($ch);
 						$answ = $res->_text;
-						$otvet = "{$answ}";
+						$otvet = "{$res}";
 
 						//-----
 					} else {
