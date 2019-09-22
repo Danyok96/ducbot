@@ -408,7 +408,7 @@ $app->post('/bot', function() use($app) {
 						$witURL = $witRoot . "v=" . $witVersion ;
 
 						$ch = curl_init();
-						$header = array("Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/mpeg3","Transfer-Encoding: chunked");
+						$header = array("Accept: audio/x-mpeg-3","Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/mpeg3","Transfer-Encoding: chunked");
 
 						curl_setopt($ch, CURLOPT_URL, $witURL);
 						curl_setopt($ch, CURLOPT_POST, 1);  //sets method to POST (1 = TRUE)
