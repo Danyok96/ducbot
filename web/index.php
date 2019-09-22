@@ -426,9 +426,8 @@ $app->post('/bot', function() use($app) {
 						curl_setopt($ch, CURLOPT_INFILESIZE, filesize($audioFileName));
 						$res = curl_exec($ch);
 						curl_close($ch);
-						$decodedResponse = json_decode($res, true);
-
-						$otvet = "{$res->_text}";
+						$answ = $res->_text;
+						$otvet = "{$answ}";
 
 						//-----
 					} else {
