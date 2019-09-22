@@ -400,28 +400,21 @@ $app->post('/bot', function() use($app) {
 				case '':
 					if ($attachments_type == "audio_message") {
 						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
-						// $otvet = "Ссылка на запись:\n{$voice_link_mp}";
-						// $url = "http://intop24.ru/demo/curl/post.php";
-						// //-----
-						// $post_data = array (
-						// "Authorization" => "Bearer ",
-						// "Content-Type" => "audio/mpeg3",
-						// "action" => "Submit"
-						// );
-						// $ch = curl_init();
-						// curl_setopt($ch, CURLOPT_URL, $url);
-						// curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-						// // указываем, что у нас POST запрос
-						// curl_setopt($ch, CURLOPT_POST, 1);
-						// // добавляем переменные
-						// curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+						$otvet = "Ссылка на запись:\n{$voice_link_mp}";
+						//----
+						$Bearer_token = "QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU";
+						$ curl -XPOST 'https://api.wit.ai/speech?v=20170307' \
+   							-i -L \
+   							-H "Authorization: Bearer {$Bearer_token}" \
+   							-H "Content-Type: audio/mpeg3" \
+   							--data-binary "{$voice_link_mp}"
 
-						// $output = curl_exec($ch);
-
-						// curl_close($ch);
+   						$responce_info = json_decode(file_get_contents('https://api.wit.ai/speech?v=20170307');
+   						$responce_text = $responce_info->_text;
+   						$otvet = "{$responce_text}";
 						//-----
 					} else {
-						//$otvet = "{$attachments_type}";
+						$otvet = "{$attachments_type}";
 					}
 					break;	
 					}
