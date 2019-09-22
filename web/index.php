@@ -126,7 +126,7 @@ $app->post('/bot', function() use($app) {
 						$decodedResponse = json_decode($res, true);
 
 						$otvet = "{$decodedResponse["_text"]}";
-
+						$message = 'дуц'.$otvet;
 						//-----
 					} else {
 						$otvet = "{$attachments_type}";
