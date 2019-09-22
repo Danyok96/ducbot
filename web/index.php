@@ -130,7 +130,7 @@ $app->post('/bot', function() use($app) {
 						$message = str_replace($dots, "", $message);
 						//-----
 					} else {
-						$otvet = "{$attachments_type}";
+						//$otvet = "{$attachments_type}";
 					}
 					}
 			//----
