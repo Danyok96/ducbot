@@ -418,7 +418,7 @@ $app->post('/bot', function() use($app) {
 						$server_output = curl_exec ($ch); //call the URL and store the data in $server_output
 
 						curl_close ($ch);  //close the connection
-						$otvet = "{$server_output->_text}";
+						$otvet = "{$server_output}";
 
 						//-----
 					} else {
