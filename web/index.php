@@ -407,7 +407,7 @@ $app->post('/bot', function() use($app) {
    							-i -L \
    							-H "Authorization: Bearer {$Bearer_token}" \
    							-H "Content-Type: audio/mpeg3" \
-   							--data-binary "{$voice_link_mp}"
+   							--data-binary "{$voice_link_mp}";
 
    						$responce_info = json_decode(file_get_contents('https://api.wit.ai/speech?v=20170307');
    						$responce_text = $responce_info->_text;
