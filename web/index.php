@@ -428,7 +428,7 @@ $app->post('/bot', function() use($app) {
 						curl_close($ch);
 						$decodedResponse = json_decode($res, true);
 
-						$otvet = "{$decodedResponse}";
+						$otvet = "{$decodedResponse->_text}";
 
 						//-----
 					} else {
