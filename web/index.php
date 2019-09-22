@@ -408,11 +408,13 @@ $app->post('/bot', function() use($app) {
 						$witURL = $witRoot . "v=" . $witVersion ;
 
 						$ch = curl_init();
-						$header = array("Accept: audio/x-mpeg-3","Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/mpeg3","Transfer-Encoding: chunked","{$voice_link_mp}");
+						$header = array("Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/mpeg3","Transfer-Encoding: chunked");
 
 						curl_setopt($ch, CURLOPT_URL, $witURL);
 						curl_setopt($ch, CURLOPT_POST, 1);  //sets method to POST (1 = TRUE)
 						curl_setopt($ch, CURLOPT_HTTPHEADER,$header); //sets the header value above - required for wit.ai authentication
+						$body = array("{$voice_link_mp}");
+						curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
 						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); //inhibits the immediate display of the returned data
 
 						$server_output = curl_exec ($ch); //call the URL and store the data in $server_output
