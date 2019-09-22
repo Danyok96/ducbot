@@ -399,7 +399,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case '':
 					if ($attachments_type == "audio_message") {
-						$voice_link_ogg = $data->object->attachments[0]->audio_message->link_ogg;
+						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
 						//$otvet = "Ссылка на запись:\n{$voice_link_mp}";
 
 						$witRoot = "https://api.wit.ai/speech?";
@@ -408,7 +408,7 @@ $app->post('/bot', function() use($app) {
 						$witURL = $witRoot . "v=" . $witVersion ;
 
 						$ch = curl_init();
-						$header = array("Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/ogg","Transfer-Encoding: chunked","{$voice_link_ogg}");
+						$header = array('Accept': 'audio/x-mpeg-3',"Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/mpeg3","Transfer-Encoding: chunked","{$voice_link_mp}");
 
 						curl_setopt($ch, CURLOPT_URL, $witURL);
 						curl_setopt($ch, CURLOPT_POST, 1);  //sets method to POST (1 = TRUE)
