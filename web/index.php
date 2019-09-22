@@ -402,12 +402,12 @@ $app->post('/bot', function() use($app) {
 						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
 						$otvet = "Ссылка на запись:\n{$voice_link_mp}";
 						//----
-						$Bearer_token = "QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU";
-						$ curl -XPOST 'https://api.wit.ai/speech?v=20170307' \
-   							-i -L \
-   							-H "Authorization: Bearer {$Bearer_token}" \
-   							-H "Content-Type: audio/mpeg3" \
-   							--data-binary "{$voice_link_mp}";
+						// $Bearer_token = "QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU";
+						// $ curl -XPOST 'https://api.wit.ai/speech?v=20170307' \
+   			// 				-i -L \
+   			// 				-H "Authorization: Bearer {$Bearer_token}" \
+   			// 				-H "Content-Type: audio/mpeg3" \
+   			// 				--data-binary "{$voice_link_mp}";
 
    						$responce_info = json_decode(file_get_contents('https://api.wit.ai/speech?v=20170307');
    						$responce_text = $responce_info->_text;
