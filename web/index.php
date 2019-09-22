@@ -400,7 +400,7 @@ $app->post('/bot', function() use($app) {
 				case '':
 					if ($attachments_type == "audio_message") {
 						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
-						// $otvet = "Ссылка на запись:\n{$voice_link_mp}";
+						$otvet = "Ссылка на запись:\n{$voice_link_mp}";
 						// $url = "http://intop24.ru/demo/curl/post.php";
 						// //-----
 						// $post_data = array (
