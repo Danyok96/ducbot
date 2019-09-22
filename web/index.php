@@ -93,6 +93,46 @@ $app->post('/bot', function() use($app) {
 			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '-тян';}
 			if ($user_id == 134572907) { $user_name = "Agent Kuz'mich";$pref = '';}
 			if ($user_id == 346654275) { $user_name = 'Фил';$pref = '';}
+			//----
+					if($message == ''){
+					if ($attachments_type == "audio_message") {
+						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
+						//$otvet = "Ссылка на запись:\n{$voice_link_mp}";
+
+						$witRoot = "https://api.wit.ai/speech?";
+						$witVersion = "20170307";
+						$witURL = $witRoot . "v=" . $witVersion ;
+
+						// $ch = curl_init();
+						// $header = array("Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/mpeg3");
+						$token_bearer = 'QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU'; # IAM-токен
+						$audioFileName = $voice_link_mp;
+
+						$file = fopen($audioFileName, 'rb');
+
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, $witURL);
+						curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $token_bearer, 'Content-Type: audio/mpeg3', 'Transfer-Encoding: chunked'));
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+						curl_setopt($ch, CURLOPT_POST, true);
+						curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+						curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
+
+						curl_setopt($ch, CURLOPT_INFILE, $file);
+						curl_setopt($ch, CURLOPT_INFILESIZE, filesize($audioFileName));
+						$res = curl_exec($ch);
+						curl_close($ch);
+						$decodedResponse = json_decode($res, true);
+
+						$otvet = "{$decodedResponse["_text"]}";
+
+						//-----
+					} else {
+						$otvet = "{$attachments_type}";
+					}
+					}
+			//----
 			switch ($message) {
 				case 'приветдуц':
 					$otvet = "Привет, [id{$user_id}|{$user_name}{$pref}]!";
@@ -397,44 +437,6 @@ $app->post('/bot', function() use($app) {
 				case 'дуцдуц':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
 					break;
-				case '':
-					if ($attachments_type == "audio_message") {
-						$voice_link_mp = $data->object->attachments[0]->audio_message->link_mp3;
-						//$otvet = "Ссылка на запись:\n{$voice_link_mp}";
-
-						$witRoot = "https://api.wit.ai/speech?";
-						$witVersion = "20170307";
-						$witURL = $witRoot . "v=" . $witVersion ;
-
-						// $ch = curl_init();
-						// $header = array("Authorization: Bearer QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU","Content-Type: audio/mpeg3");
-						$token_bearer = 'QCDW4ADLLIDB3NYO2OTDAPZAOQQXC2BU'; # IAM-токен
-						$audioFileName = $voice_link_mp;
-
-						$file = fopen($audioFileName, 'rb');
-
-						$ch = curl_init();
-						curl_setopt($ch, CURLOPT_URL, $witURL);
-						curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $token_bearer, 'Content-Type: audio/mpeg3', 'Transfer-Encoding: chunked'));
-						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-						curl_setopt($ch, CURLOPT_POST, true);
-						curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-						curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-
-						curl_setopt($ch, CURLOPT_INFILE, $file);
-						curl_setopt($ch, CURLOPT_INFILESIZE, filesize($audioFileName));
-						$res = curl_exec($ch);
-						curl_close($ch);
-						$decodedResponse = json_decode($res, true);
-						
-						$otvet = "{$decodedResponse["_text"]}";
-
-						//-----
-					} else {
-						$otvet = "{$attachments_type}";
-					}
-					break;	
 					}
 			//-------
 			if (strpos($message_to_calc, 'дуцпосчитай') !== false) // именно через жесткое сравнение
