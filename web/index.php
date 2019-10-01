@@ -485,7 +485,7 @@ function time_elapsed_string($datetime, $full = false)
     $now = new DateTime;
     $ago = new DateTime($datetime);
     $diff = $now->diff($ago);
-    if($now > $ago){return $string = 'уже';}
+    if($now > $ago){return $string = 'Уже прошло.';}
     else
     {
     $diff->w = floor($diff->d / 7);
@@ -509,7 +509,7 @@ function time_elapsed_string($datetime, $full = false)
     }
 
     if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(";\n", $string) . ' ещё.' : 'сейчас.';
+    return $string ? implode(";\n", $string) . ' ещё осталось.' : 'сейчас.';
 	}
 }
 $app->run();
