@@ -429,9 +429,10 @@ $app->post('/bot', function() use($app) {
 					//$rnd = rand(1,100);
 					$otvet = rand(1,100);
 					break;
-				// case 'тест':
-				//  	$media = "photo-180470421_456239020";
-				//  	break;	
+				case 'тест':
+					$otvet = time_elapsed_string('2019-09-09 00:00:00', true);
+				 	//$media = "photo-180470421_456239020";
+				 	break;	
 				case 'дуцрасписание':
 					$media = "photo-180470421_457239021";
 					break;
