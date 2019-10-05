@@ -184,10 +184,10 @@ $app->post('/bot', function() use($app) {
 				case 'дуцспасибо':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], на здоровья!";
 					break;
-				// case 'дуцкогдалабы':
-				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nУГИФС:\n21 мая - защита(вторая подгруппа)\n27 мая - защита(первая подгруппа)\n";
-				// 	$media = "photo-180470421_456239020";
-				// 	break;
+				case 'дуцкогдалабы':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nОЛТ(сем):\n1 ноября с 13:50 в 531\n15 ноября с 13:50 в 531\nОстальное уточняется.";
+					//$media = "photo-180470421_456239020";
+					break;
 				case 'хейдуц':
 					$otvet = "Чё кого, [id{$user_id}|{$user_name}{$pref}]?";
 					break;
@@ -267,15 +267,15 @@ $app->post('/bot', function() use($app) {
 									break;
 								case 'Fri':
 								//Пятница
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n10:15-11:50 Основы лазерной техники(сем) 1039л\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\n⚠Всего одна пара.";
 									break;
 								case 'Sat':
 								//Суббота
 									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
 									break;
 							}
-								if ($date == '01.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
-								if ($date == '02.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
+								if ($date == '01.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
+								if ($date == '15.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
 								if ($date == '03.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 								if ($date == '04.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 						}
@@ -349,7 +349,8 @@ $app->post('/bot', function() use($app) {
 									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek}.\nЧиль, завтра выходной. =)";
 									break;
 								}	
-								if ($nextdate == '01.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
+								if ($nextdate == '01.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
+								if ($nextdate == '15.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
 								if ($nextdate == '15.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:00 лаба по ЦОСу 934л\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";}
 
 								
