@@ -401,7 +401,7 @@ $app->post('/bot', function() use($app) {
 						break;
 						case '11':
 						//вторник
-							$media = "audio2001793711_54793711";
+							$media = "audio-2001793711_54793711";
 						break;
 					}
 						//$media = "audio20017026_456239320";
