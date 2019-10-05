@@ -357,7 +357,7 @@ $app->post('/bot', function() use($app) {
 						}
 					break;	
 				case 'дуцтрек':
-					$rnd = rand(1,10);
+					$rnd = rand(11,11);
 					switch ($rnd) {
 						case '1':
 						//Sayonara детка
@@ -398,6 +398,10 @@ $app->post('/bot', function() use($app) {
 						case '10':
 						//Между нами секс
 							$media = "audio20017026_456239451";
+						break;
+						case '11':
+						//вторник
+							$media = "audio2001793711_54793711";
 						break;
 					}
 						//$media = "audio20017026_456239320";
