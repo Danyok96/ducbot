@@ -191,6 +191,11 @@ $app->post('/bot', function() use($app) {
 				case 'хейдуц':
 					$otvet = "Чё кого, [id{$user_id}|{$user_name}{$pref}]?";
 					break;
+				case 'дуцрасписание531':
+				case 'дуцрасписание531аудитории':
+				case 'дуцрасписаниелаболт':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://mail.bmstu.ru/~vlo@bmstu.ru/schedule531.html";
+					break;
 				case 'дуцзаебис':
 					$otvet = "Это по-кайфу, [id{$user_id}|{$user_name}{$pref}].=)";
 					break;	
