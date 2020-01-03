@@ -470,7 +470,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/zkdaamG-Ol-sjg";
 					break;
 				case 'дуцсколькоосталось':
-					$otvet = "\n{time_elapsed_string('2019-10-10 00:00:00', true)}";
+					$otvet = "ффф\n"+time_elapsed_string('2019-10-10 00:00:00', true)};
 					break;
 				case 'дуцссылканапрезентации':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСотСС:\nhttps://cloud.mail.ru/public/cgkk/48CYfcwtt\nТОР:\nhttps://cloud.mail.ru/public/4rtR/3agzjK72Z\nТПРС:\nhttps://cloud.mail.ru/public/wGCj/3xfHLB5AZ";
