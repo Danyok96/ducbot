@@ -468,7 +468,7 @@ $app->post('/bot', function() use($app) {
 				case 'дуцсчётчик':
 					$duc_count = getenv('GLOBAL_DUC_COUNT');
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$duc_count}";
-					GLOBAL_DUC_COUNT++;
+					//GLOBAL_DUC_COUNT++;
 					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
