@@ -465,12 +465,10 @@ $app->post('/bot', function() use($app) {
 						break;
 					}
 					break;
-				case 'дуцсчётчик':
-					$duc_count = getenv('GLOBAL_DUC_COUNT');
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$duc_count}";
-					$lol=2;
-					putenv("GLOBAL_DUC_COUNT=$lol");
-					break;
+				// case 'дуцсчётчик':
+				// 	$duc_count = getenv('GLOBAL_DUC_COUNT');
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$duc_count}";
+				// 	break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/zkdaamG-Ol-sjg";
