@@ -573,6 +573,13 @@ $app->post('/bot', function() use($app) {
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 
 			$fp = fopen("counter.txt", "r+"); // Открываем файл в режиме записи
+			if ($fp)
+			{
+				while (!feof($fp))
+				{
+					$mytext = fgets($fp, 999);
+				}
+			}
 			$mytext++; // Исходная строка
 			$test = fwrite($fp, $mytext); // Запись в файл
 			fclose($fp); //Закрытие файла
