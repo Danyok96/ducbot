@@ -446,7 +446,7 @@ $app->post('/bot', function() use($app) {
 						break;
 						case '14':
 						//молчи
-							$media = "audio-2001793708_54793708";
+							//$media = "audio-2001793708_54793708";
 						break;
 					}
 						//$media = "audio20017026_456239320";
