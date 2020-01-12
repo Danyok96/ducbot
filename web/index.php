@@ -486,19 +486,25 @@ $app->post('/bot', function() use($app) {
 				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nТекст файла: {$mytext}";
 				// 	break;
 					//----------------------
-				// case 'дуцчтениеизаписьфайла':
-				// 	$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
-				// 	if ($fp)
-				// 	{
-				// 		while (!feof($fp))
-				// 		{
-				// 		$mytext = fgets($fp, 999);
-				// 		}
-				// 	}
-				// 	else $mytext = "Ошибка при открытии файла";
-				// 	fclose($fp);
-				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nТекст файла: {$mytext}";
-				// 	break;
+				case 'дуцчтениеизаписьфайла':
+					$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
+					if ($fp)
+					{
+						while (!feof($fp))
+						{
+						$mytext = fgets($fp, 999);
+						}
+					}
+					else $mytext = "Ошибка при открытии файла";
+					fclose($fp);
+
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nТекст файла: {$mytext}";
+
+					$fp = fopen("counter.txt", "r+"); // Открываем файл в режиме записи
+					$mytext++; // Исходная строка
+					$test = fwrite($fp, $mytext); // Запись в файл
+					fclose($fp); //Закрытие файла
+					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/zkdaamG-Ol-sjg";
