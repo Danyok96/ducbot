@@ -466,10 +466,23 @@ $app->post('/bot', function() use($app) {
 						break;
 					}
 					break;
-				case 'дуцсчётчик':
-					$GLOBALS['duc_count'] = $GLOBALS['duc_count'];
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$GLOBALS['duc_count']}";
-					$GLOBALS['duc_count'] += 1;
+				// case 'дуцсчётчик':
+				// 	$GLOBALS['duc_count'] = $GLOBALS['duc_count'];
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$GLOBALS['duc_count']}";
+				// 	$GLOBALS['duc_count'] += 1;
+				// 	break;
+				case 'дуцчтениефайла':
+					$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
+					if ($fp)
+					{
+						while (!feof($fp))
+						{
+						$mytext = fgets($fp, 999);
+						}
+					}
+					else $mytext = "Ошибка при открытии файла";
+					fclose($fp);
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nТекст файла: {$mytext}}";
 					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
