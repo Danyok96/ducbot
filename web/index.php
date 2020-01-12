@@ -1,7 +1,7 @@
 <?php
 define('TIMEZONE', 'Europe/Moscow');
 date_default_timezone_set(TIMEZONE);
-$duc_count = "0";
+$duc_count = 0;
 require('../vendor/autoload.php');
 
 $app = new Silex\Application();
@@ -467,7 +467,7 @@ $app->post('/bot', function() use($app) {
 					}
 					break;
 				case 'дуцсчётчик':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: ".strval($duc_count);
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: $duc_count";
 					$duc_count++;
 					break;
 				case 'дуцоблакосерёги':
