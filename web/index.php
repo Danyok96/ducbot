@@ -449,7 +449,7 @@ $app->post('/bot', function() use($app) {
 							$media = "audio-2001793708_54793708";
 						break;
 					}
-						//$media = "audio20017026_456239320";
+						////$media = "audio20017026_456239320";
 
 					break;
 				case 'дуцответсоветчикам':
