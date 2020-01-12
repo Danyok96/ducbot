@@ -467,7 +467,7 @@ $app->post('/bot', function() use($app) {
 					}
 					break;
 				case 'дуцсчётчик':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: ".$duc_count;
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: ".strval($duc_count);
 					$duc_count++;
 					break;
 				case 'дуцоблакосерёги':
