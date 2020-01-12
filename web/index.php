@@ -1,6 +1,7 @@
 <?php
 define('TIMEZONE', 'Europe/Moscow');
 date_default_timezone_set(TIMEZONE);
+$duc_count = 0;
 require('../vendor/autoload.php');
 
 $app = new Silex\Application();
@@ -465,10 +466,10 @@ $app->post('/bot', function() use($app) {
 						break;
 					}
 					break;
-				// case 'дуцсчётчик':
-				// 	$duc_count = getenv('GLOBAL_DUC_COUNT');
-				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$duc_count}";
-				// 	break;
+				case 'дуцсчётчик':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$duc_count}";
+					$duc_count++;
+					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/zkdaamG-Ol-sjg";
