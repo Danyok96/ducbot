@@ -1,4 +1,4 @@
 vendor/
 .env
 
-web/counter.txt
+web/*.txt
