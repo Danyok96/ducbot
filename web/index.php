@@ -479,6 +479,13 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$mytext}";
 					break;
 					//------------
+					case 'дуцсоздайфайл':
+					$fp = fopen("counter.txt", "r+"); // Открываем файл в режиме записи
+					$mytext = 0; // Исходная строка
+					$test = fwrite($fp, $mytext); // Запись в файл
+					fclose($fp); //Закрытие файла
+						break;
+					//------------
 				// case 'дуцчтениефайла':
 				// 	$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
 				// 	if ($fp)
