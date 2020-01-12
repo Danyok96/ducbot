@@ -480,7 +480,7 @@ $app->post('/bot', function() use($app) {
 					break;
 					//------------
 					case 'дуцсоздайфайл':
-					$fp = fopen("counter.txt", "r+"); // Открываем файл в режиме записи
+					$fp = fopen("counter.txt", "w+"); // Открываем файл в режиме записи
 					$mytext = 0; // Исходная строка
 					$test = fwrite($fp, $mytext); // Запись в файл
 					fclose($fp); //Закрытие файла
