@@ -465,11 +465,19 @@ $app->post('/bot', function() use($app) {
 						break;
 					}
 					break;
-				// case 'дуцсчётчик':
-				// 	$GLOBALS['duc_count'] = $GLOBALS['duc_count'];
-				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$GLOBALS['duc_count']}";
-				// 	$GLOBALS['duc_count'] += 1;
-				// 	break;
+				case 'дуцсчётчик':
+					$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
+					if ($fp)
+					{
+						while (!feof($fp))
+						{
+						$mytext = fgets($fp, 999);
+						}
+					}
+					else $mytext = "Ошибка при открытии файла";
+					fclose($fp);
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$mytext}";
+					break;
 					//------------
 				// case 'дуцчтениефайла':
 				// 	$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
@@ -563,6 +571,11 @@ $app->post('/bot', function() use($app) {
 
 
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
+
+			$fp = fopen("counter.txt", "r+"); // Открываем файл в режиме записи
+			$mytext++; // Исходная строка
+			$test = fwrite($fp, $mytext); // Запись в файл
+			fclose($fp); //Закрытие файла
 
 			return 'ok';
 			break;
