@@ -148,7 +148,7 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], кидать подгоны, чтобы Даня не агрился.=)";
 					break;
 				case 'дуцктотакойходж':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], нормас чел, иногда сутулый, конечно, но ладно.=)";
+					$otvet = "[id{$user_id}|{$user_name}{$pref}], нормас чел, теперь наш староста, ебать.=)";
 					break;
 				case 'дуцдата':
 					$ductime = strftime("%A",time());
@@ -221,14 +221,14 @@ $app->post('/bot', function() use($app) {
 					break;	
 				case 'дуцрасписаниенасегодня':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nЧиль, сегодня выходной. =)";
-					if ($date == '09.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по РСПИ (9 января 15:00 1146л)";}
-					if ($date == '10.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по РСПИ (10 января 14:00 1039л)";}
-					if ($date == '13.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ТОР (13 января 12:00 507)";}
-					if ($date == '15.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ТОР (15 января 9:00 1146л)";}
-					if ($date == '17.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ОЛТ (17 января 10:00 1039л)";}
-					if ($date == '20.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ОЛТ (20 января 9:00 1039л)";}
-					if ($date == '23.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ОР (23 января 14:00 1146л)";}
-					if ($date == '24.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ОР (24 января 14:00 1146л)";}
+					// if ($date == '09.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по РСПИ (9 января 15:00 1146л)";}
+					// if ($date == '10.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по РСПИ (10 января 14:00 1039л)";}
+					// if ($date == '13.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ТОР (13 января 12:00 507)";}
+					// if ($date == '15.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ТОР (15 января 9:00 1146л)";}
+					// if ($date == '17.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ОЛТ (17 января 10:00 1039л)";}
+					// if ($date == '20.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ОЛТ (20 января 9:00 1039л)";}
+					// if ($date == '23.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ОР (23 января 14:00 1146л)";}
+					// if ($date == '24.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ОР (24 января 14:00 1146л)";}
 				//-------------------------------
 					// 	if(($numofstudweek % 2) == 0)
 					// 	{
@@ -307,14 +307,14 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцрасписаниеназавтра':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЧиль, завтра выходной. =)";
-					if ($nextdate == '09.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по РСПИ (9 января 15:00 1146л)";}
-					if ($nextdate == '10.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по РСПИ (10 января 14:00 1039л)";}
-					if ($nextdate == '13.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по ТОР (13 января 12:00 507)";}
-					if ($nextdate == '15.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по ТОР (15 января 9:00 1146л)";}
-					if ($nextdate == '17.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по ОЛТ (17 января 10:00 1039л)";}
-					if ($nextdate == '20.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по ОЛТ (20 января 9:00 1039л)";}
-					if ($nextdate == '23.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по ОР (23 января 14:00 1146л)";}
-					if ($nextdate == '24.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по ОР (24 января 14:00 1146л)";}
+					// if ($nextdate == '09.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по РСПИ (9 января 15:00 1146л)";}
+					// if ($nextdate == '10.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по РСПИ (10 января 14:00 1039л)";}
+					// if ($nextdate == '13.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по ТОР (13 января 12:00 507)";}
+					// if ($nextdate == '15.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по ТОР (15 января 9:00 1146л)";}
+					// if ($nextdate == '17.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по ОЛТ (17 января 10:00 1039л)";}
+					// if ($nextdate == '20.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по ОЛТ (20 января 9:00 1039л)";}
+					// if ($nextdate == '23.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по ОР (23 января 14:00 1146л)";}
+					// if ($nextdate == '24.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по ОР (24 января 14:00 1146л)";}
 				//----------------------------
 						// if(($numofnextstudweek % 2) == 0)
 						// {
