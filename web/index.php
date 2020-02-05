@@ -233,73 +233,73 @@ $app->post('/bot', function() use($app) {
 					// if ($date == '23.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ОР (23 января 14:00 1146л)";}
 					// if ($date == '24.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ОР (24 января 14:00 1146л)";}
 				//-------------------------------
-						if(($numofstudweek % 2) == 0)
-						{
-    							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
-							switch ($day) {
-								case 'Sun':
-								//Воскресенье
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
-									break;
-								case 'Mon':
-								//Понедельник
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n15:40-17:15 Сотовые системы связи(лек) 1146л\n17:25-19:00 Теория и приминение радиолокационных сигналов(лек) 1146л\n19:10-20:45 Основы лазерной техники(лек) 1146л";
-									break;
-								case 'Tue':
-								//Вторник
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n10:15-11:50 Основы радионавигации(лек) 1146л\n12:00-13:35 Основы радионавигации(лек) 1146л\n13:50-15:25 Теоретические основы радиолокации(лек) 1146л";
-									break;
-								case 'Wed':
-								//Среда
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n10:15-11:50 Сотовые системы связи(сем) 1146л\n12:00-13:35 Основы теории и техники радиосистем передачи информации(сем) 1039л";
-									break;
-								case 'Thu':
-								//Четверг
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nСегодня только военка.";
-									break;
-								case 'Fri':
-								//Пятница
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\n13:50-15:25 Основы теории и техники радиосистем передачи информации(лек) 1146л";
-									break;
-								case 'Sat':
-								//Суббота
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
-									break;
-							}
-						}
-						else
-						{
-    							//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
-							switch ($day) {
-								case 'Sun':
-								//Воскресенье
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
-									break;
-								case 'Mon':
-								//Понедельник
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n15:40-17:15 Сотовые системы связи(лек) 1146л\n17:25-19:00 Теория и приминение радиолокационных сигналов(лек) 1146л\n19:10-20:45 Основы лазерной техники(лек) 1146л";
-									break;
-								case 'Tue':
-								//Вторник
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n10:15-11:50 Основы радионавигации(лек) 1146л\n12:00-13:35 Теоретические основы радиолокации(лек) 1146л\n13:50-15:25 Теоретические основы радиолокации(лек) 1146л";
-									break;
-								case 'Wed':
-								//Среда
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n08:30-10:05 Теоретические основы радиолокации(сем) 1146л\n10:15-11:50 Теоретические основы радиолокации(сем) 1146л\n12:00-13:35 Основы теории и техники радиосистем передачи информации(сем) 1039л";
-									break;
-								case 'Thu':
-								//Четверг
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nСегодня только военка.";
-									break;
-								case 'Fri':
-								//Пятница
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\n⚠Всего одна пара.";
-									break;
-								case 'Sat':
-								//Суббота
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
-									break;
-							}
+						// if(($numofstudweek % 2) == 0)
+						// {
+    		// 					//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
+						// 	switch ($day) {
+						// 		case 'Sun':
+						// 		//Воскресенье
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
+						// 			break;
+						// 		case 'Mon':
+						// 		//Понедельник
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n15:40-17:15 Сотовые системы связи(лек) 1146л\n17:25-19:00 Теория и приминение радиолокационных сигналов(лек) 1146л\n19:10-20:45 Основы лазерной техники(лек) 1146л";
+						// 			break;
+						// 		case 'Tue':
+						// 		//Вторник
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n10:15-11:50 Основы радионавигации(лек) 1146л\n12:00-13:35 Основы радионавигации(лек) 1146л\n13:50-15:25 Теоретические основы радиолокации(лек) 1146л";
+						// 			break;
+						// 		case 'Wed':
+						// 		//Среда
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n10:15-11:50 Сотовые системы связи(сем) 1146л\n12:00-13:35 Основы теории и техники радиосистем передачи информации(сем) 1039л";
+						// 			break;
+						// 		case 'Thu':
+						// 		//Четверг
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nСегодня только военка.";
+						// 			break;
+						// 		case 'Fri':
+						// 		//Пятница
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\n13:50-15:25 Основы теории и техники радиосистем передачи информации(лек) 1146л";
+						// 			break;
+						// 		case 'Sat':
+						// 		//Суббота
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
+						// 			break;
+						// 	}
+						// }
+						// else
+						// {
+    		// 					//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
+						// 	switch ($day) {
+						// 		case 'Sun':
+						// 		//Воскресенье
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
+						// 			break;
+						// 		case 'Mon':
+						// 		//Понедельник
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n15:40-17:15 Сотовые системы связи(лек) 1146л\n17:25-19:00 Теория и приминение радиолокационных сигналов(лек) 1146л\n19:10-20:45 Основы лазерной техники(лек) 1146л";
+						// 			break;
+						// 		case 'Tue':
+						// 		//Вторник
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n10:15-11:50 Основы радионавигации(лек) 1146л\n12:00-13:35 Теоретические основы радиолокации(лек) 1146л\n13:50-15:25 Теоретические основы радиолокации(лек) 1146л";
+						// 			break;
+						// 		case 'Wed':
+						// 		//Среда
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n08:30-10:05 Теоретические основы радиолокации(сем) 1146л\n10:15-11:50 Теоретические основы радиолокации(сем) 1146л\n12:00-13:35 Основы теории и техники радиосистем передачи информации(сем) 1039л";
+						// 			break;
+						// 		case 'Thu':
+						// 		//Четверг
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nСегодня только военка.";
+						// 			break;
+						// 		case 'Fri':
+						// 		//Пятница
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\n⚠Всего одна пара.";
+						// 			break;
+						// 		case 'Sat':
+						// 		//Суббота
+						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\nЧиль, сегодня выходной. =)";
+						// 			break;
+						// 	}
 					// 			if ($date == '01.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
 					// 			if ($date == '15.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
 					// 			if ($date == '03.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
