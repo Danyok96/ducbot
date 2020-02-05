@@ -185,21 +185,23 @@ $app->post('/bot', function() use($app) {
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], на здоровья!";
 					break;
 				case 'дуцкогдалабы':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\n>ОЛТ(сем):\n1 ноября с 13:50 в 531\n15 ноября с 13:50 в 531\n>РСПИ(лаба):\nЛР1: 30 октября с 13:50 в 1242л/2\nЛР2: 13 ноября с 13:50 в 1242л/2\nЛР3: 27 ноября с 13:50 в 1242л/2\nМетоды: http://rl1.bmstu.ru/courses/rspi\n⚠Нужно приходить с решёными задачами!\n>ТОР\nЛР3: 7 ноября\nЛР1/2: 12 декабря с 12:00 в 1242л\n>Остальное уточняется.";
+					// $otvet = "[id{$user_id}|{$user_name}{$pref}],\n>ОЛТ(сем):\n1 ноября с 13:50 в 531\n15 ноября с 13:50 в 531\n>РСПИ(лаба):\nЛР1: 30 октября с 13:50 в 1242л/2\nЛР2: 13 ноября с 13:50 в 1242л/2\nЛР3: 27 ноября с 13:50 в 1242л/2\nМетоды: http://rl1.bmstu.ru/courses/rspi\n⚠Нужно приходить с решёными задачами!\n>ТОР\nЛР3: 7 ноября\nЛР1/2: 12 декабря с 12:00 в 1242л\n>Остальное уточняется.";
+					 $otvet = "[id{$user_id}|{$user_name}{$pref}], пока чиль.=)";
 					//$media = "photo-180470421_456239020";
 					break;
 				case 'хейдуц':
 					$otvet = "Чё кого, [id{$user_id}|{$user_name}{$pref}]?";
-					break;
-				case 'дуцрасписание531':
-				case 'дуцрасписание531аудитории':
-				case 'дуцрасписаниелаболт':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://mail.bmstu.ru/~vlo@bmstu.ru/schedule531.html";
-					break;
-				case 'дуцзаебис':
+				 	break;
+				// case 'дуцрасписание531':
+				// case 'дуцрасписание531аудитории':
+				// case 'дуцрасписаниелаболт':
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://mail.bmstu.ru/~vlo@bmstu.ru/schedule531.html";
+				// 	break;
+				case 'дуцзаебись':
 					$otvet = "Это по-кайфу, [id{$user_id}|{$user_name}{$pref}].=)";
 					break;	
 				case 'бунд':
+				case 'бунт':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], так, блэт. Успокаеваемся!=)";
 					break;
 				case 'дуцоблако':
