@@ -551,7 +551,7 @@ $app->post('/bot', function() use($app) {
 				//  	$media = "photo-180470421_456239020";
 				//  	break;	
 				case 'дуцрасписание':
-					$media = "photo-180470421_262202433";
+					$media = "photo-180470421_457239022";
 					break;
 				case 'дуцдуц':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
