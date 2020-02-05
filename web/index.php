@@ -319,9 +319,9 @@ $app->post('/bot', function() use($app) {
 					// if ($nextdate == '23.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра консультация по ОР (23 января 14:00 1146л)";}
 					// if ($nextdate == '24.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nЗавтра экзамен по ОР (24 января 14:00 1146л)";}
 				//----------------------------
-						// if(($numofnextstudweek % 2) == 0)
-						// {
-    		// 					//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
+						 if(($numofnextstudweek % 2) == 0)
+						 {
+    		 					$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - знаменатель.";
 						// 	switch ($nextday){
 						// 		case 'Sun':
 						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek}.\nЧиль, завтра выходной. =)";
@@ -351,10 +351,10 @@ $app->post('/bot', function() use($app) {
 						// 			$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek}.\nЧиль, завтра выходной. =)";
 						// 			break;
 						// 		}
-						// }
-						// else
-						// {
-    		// 					//$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
+						 }
+						 else
+						 {
+    							$otvet = "[id{$user_id}|{$user_name}-дуц],\n {$numofstudweek} - числитель.";
 						// 	switch ($nextday) {
 						// 		case 'Sun':
 						// 		//Воскресенье
@@ -390,7 +390,7 @@ $app->post('/bot', function() use($app) {
 						// 		if ($nextdate == '15.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:00 лаба по ЦОСу 934л\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";}
 
 								
-						// }
+						 }
 					break;	
 				case 'дуцтрек':
 					$rnd = rand(1,14);
