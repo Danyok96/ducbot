@@ -57,13 +57,13 @@ $app->post('/bot', function() use($app) {
 			$time = date("H:i");
 			$test = strtotime($date);
 			$numofweek = date("W",$test);
-			$numofstudweek = $numofweek-35;
+			$numofstudweek = $numofweek;//---
 			$next_date = strtotime("+1 day");
 			$nextdate = date("d.m.Y", $next_date);
 			$nextday = date("D", $next_date);
 			$testnext = strtotime($nextdate);
 			$numofnextweek = date("W", $testnext);
-			$numofnextstudweek = $numofnextweek-35;
+			$numofnextstudweek = $numofnextweek;//---
 			$sex = $user_info->response[0]->sex;
 			switch ($sex) {
 				case '1':
