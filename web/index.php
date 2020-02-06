@@ -648,28 +648,4 @@ function time_elapsed_string($datetime, $full = false)
     return $string ? implode(";\n", $string) . ' ещё осталось.' : 'сейчас.';
 	}
 }
-
-function replaceColor($color) 
-{
-        switch ($color) {
-            case 'red':
-                $color = 'negative';
-                break;
-            case 'green':
-                $color = 'positive';
-                break;
-            case 'white':
-                $color = 'default';
-                break;
-            case 'blue':
-                $color = 'primary';
-                break;
-
-            default:
-                # code...
-                break;
-        }
-        return $color;
-}
-
 $app->run();
