@@ -532,16 +532,25 @@ $app->post('/bot', function() use($app) {
 				// 	break;
 				case 'дуцкнопки':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем запостить кнопки.=)";
-				// 	$buttons = "{\"one_time\": false,\"buttons\": [[{\"action\": {\"type\": \"text\",\"payload\": \"{\"button\": \"1\"}\",\"label\": \"дуц расписание на сегодня\"},\"color\": \"primary\"
-    //  },
-    // {
-    //    \"action\": {
-    //      \"type\": \"text\",
-    //      \"payload\": \"{\"button\": \"2\"}\",
-    //      \"label\": \"дуц расписание на завтра\"
-    //    },
-    //    \"color\": \"primary\"
-    //  }]]}";
+					$buttons = [
+								   'one_time' => false,
+								   'buttons' => [
+								     [[
+								       "action" => [
+								         "type" => "text",
+								         "payload" => "{\"button\": \"1\"}",
+								         "label" => "дуц расписание на сегодня"
+								       ],
+								       "color" => "primary"
+								     ],
+								    [
+								       "action" => [
+								         "type" => "text",
+								         "payload" => "{\"button\": \"2\"}",
+								         "label" => "дуц расписание на завтра"
+								       ],
+								       "color" => "primary"
+								     ]]]];
 					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
@@ -596,7 +605,7 @@ $app->post('/bot', function() use($app) {
 				'peer_id' => $peer_id,
 				'message' => $otvet,
 				'attachment' => $media,
-				'keyboard' => $buttons,
+				'keyboard' => $buttons[],
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.92'
 			];
