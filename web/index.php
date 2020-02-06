@@ -536,20 +536,20 @@ $app->post('/bot', function() use($app) {
 								   'one_time' => false,
 								   'buttons' => [
 								     [[
-								       "action" => [
-								         "type" => "text",
-								         "payload" => "{\"button\": \"1\"}",
-								         "label" => "дуц расписание на сегодня"
+								       'action' => [
+								         'type' => 'text',
+								         'payload' => '{\"button\": \"1\"}',
+								         'label' => 'дуц расписание на сегодня'
 								       ],
-								       "color" => "primary"
+								       'color' => 'primary'
 								     ],
 								    [
-								       "action" => [
-								         "type" => "text",
-								         "payload" => "{\"button\": \"2\"}",
-								         "label" => "дуц расписание на завтра"
+								       'action' => [
+								         'type' => 'text',
+								         'payload' => '{\"button\": \"2\"}',
+								         'label' => 'дуц расписание на завтра'
 								       ],
-								       "color" => "primary"
+								       'color" => "primary'
 								     ]]]];
 					break;
 				case 'дуцоблакосерёги':
