@@ -530,7 +530,7 @@ $app->post('/bot', function() use($app) {
 				// 	$test = fwrite($fp, $mytext); // Запись в файл
 				// 	fclose($fp); //Закрытие файла
 				// 	break;
-				case 'тесткнопок':
+				case 'дуцкнопки':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем запостить кнопки.=)";
 					$buttons = "{\"one_time\": false,\"buttons\": [[{\"action\": {\"type\": \"text\",\"payload\": \"{\"button\": \"1\"}\",\"label\": \"дуц расписание на сегодня\"},\"color\": \"primary\"
      },
