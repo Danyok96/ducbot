@@ -610,7 +610,7 @@ $app->post('/bot', function() use($app) {
 				'peer_id' => $peer_id,
 				'message' => $otvet,
 				'attachment' => $media,
-				'keyboard' => $buttons,
+				//'keyboard' => $buttons,
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.92'
 			];
