@@ -532,24 +532,7 @@ $app->post('/bot', function() use($app) {
 				// 	break;
 				case 'тесткнопок':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем запостить кнопки.=)";
-					$buttons = "{\"one_time\": false,
-					   \"buttons\": [
-					     [{
-					       \"action\": {
-					         \"type\": \"text\",
-					         \"payload\": \"{\"button\": \"1\"}\",
-					         \"label\": "Red"
-					       },
-					       \"color\": \"negative\"
-					     },
-					    {
-					       \"action\": {
-					         \"type\": \"text\",
-					         \"payload\": \"{\"button\": \"2\"}\",
-					         \"label\": \"Green\"
-					       },
-					       \"color\": \"positive\"
-					     }]]}";
+					$buttons = [];
 					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
