@@ -530,33 +530,33 @@ $app->post('/bot', function() use($app) {
 				// 	$test = fwrite($fp, $mytext); // Запись в файл
 				// 	fclose($fp); //Закрытие файла
 				// 	break;
-				case 'тесткнопок':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем запостить кнопки.=)";
-					BTN_1 = [["command" => 'btn_1'], "Кнопка 1", "green"];
-					BTN_2 = [["command" => 'btn_2'], "Кнопка 2", "blue"];
-					BTN_3 = [["command" => 'btn_3'], "Кнопка 3", "red"];
-					BTN_4 = [["command" => 'btn_4'], "Кнопка 4", "white"];
-					$gl_massiv = [[BTN_1, BTN_2, BTN_3, BTN_4]];
-					$buttons = [];
-       				$i = 0;
-        			foreach ($gl_massiv as $button_str) {
-            			$j = 0;
-            			foreach ($button_str as $button) {
-                			$color = $this->replaceColor($button[2]);
-                			$buttons[$i][$j]["action"]["type"] = "text";
-                			if ($button[0] != null)
-                    			$buttons[$i][$j]["action"]["payload"] = json_encode($button[0], JSON_UNESCAPED_UNICODE);
-                			$buttons[$i][$j]["action"]["label"] = $button[1];
-                			$buttons[$i][$j]["color"] = $color;
-                			$j++;
-            			}
-            			$i++;
-        			}
-        			$buttons = array(
-            			"one_time" => $one_time,
-            			"buttons" => $buttons);
-        			$buttons = json_encode($buttons, JSON_UNESCAPED_UNICODE);
-					break;
+				// case 'тесткнопок':
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем запостить кнопки.=)";
+				// 	BTN_1 = [["command" => 'btn_1'], "Кнопка 1", "green"];
+				// 	BTN_2 = [["command" => 'btn_2'], "Кнопка 2", "blue"];
+				// 	BTN_3 = [["command" => 'btn_3'], "Кнопка 3", "red"];
+				// 	BTN_4 = [["command" => 'btn_4'], "Кнопка 4", "white"];
+				// 	$gl_massiv = [[BTN_1, BTN_2, BTN_3, BTN_4]];
+				// 	$buttons = [];
+    //    				$i = 0;
+    //     			foreach ($gl_massiv as $button_str) {
+    //         			$j = 0;
+    //         			foreach ($button_str as $button) {
+    //             			$color = $this->replaceColor($button[2]);
+    //             			$buttons[$i][$j]["action"]["type"] = "text";
+    //             			if ($button[0] != null)
+    //                 			$buttons[$i][$j]["action"]["payload"] = json_encode($button[0], JSON_UNESCAPED_UNICODE);
+    //             			$buttons[$i][$j]["action"]["label"] = $button[1];
+    //             			$buttons[$i][$j]["color"] = $color;
+    //             			$j++;
+    //         			}
+    //         			$i++;
+    //     			}
+    //     			$buttons = array(
+    //         			"one_time" => $one_time,
+    //         			"buttons" => $buttons);
+    //     			$buttons = json_encode($buttons, JSON_UNESCAPED_UNICODE);
+				// 	break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/zkdaamG-Ol-sjg";
