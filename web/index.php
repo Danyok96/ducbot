@@ -532,16 +532,16 @@ $app->post('/bot', function() use($app) {
 				// 	break;
 				case 'дуцкнопки':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем запостить кнопки.=)";
-					$buttons = "{\"one_time\": false,\"buttons\": [[{\"action\": {\"type\": \"text\",\"payload\": \"{\"button\": \"1\"}\",\"label\": \"дуц расписание на сегодня\"},\"color\": \"primary\"
-     },
-    {
-       \"action\": {
-         \"type\": \"text\",
-         \"payload\": \"{\"button\": \"2\"}\",
-         \"label\": \"дуц расписание на завтра\"
-       },
-       \"color\": \"primary\"
-     }]]}";
+				// 	$buttons = "{\"one_time\": false,\"buttons\": [[{\"action\": {\"type\": \"text\",\"payload\": \"{\"button\": \"1\"}\",\"label\": \"дуц расписание на сегодня\"},\"color\": \"primary\"
+    //  },
+    // {
+    //    \"action\": {
+    //      \"type\": \"text\",
+    //      \"payload\": \"{\"button\": \"2\"}\",
+    //      \"label\": \"дуц расписание на завтра\"
+    //    },
+    //    \"color\": \"primary\"
+    //  }]]}";
 					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
