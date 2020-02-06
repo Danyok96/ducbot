@@ -468,34 +468,34 @@ $app->post('/bot', function() use($app) {
 						break;
 					}
 					break;
-				case 'дуцсчётчик':
-					$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
-					if ($fp)
-					{
-						while (!feof($fp))
-						{
-						$mytext = fgets($fp, 999);
-						}
-					}
-					else $mytext = "Ошибка при открытии файла";
-					fclose($fp);
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$mytext}";
-					break;
-					//------------
-					case 'дуцсоздайфайл':
-					if($user_id == 20017026)
-					{
-					$fp = fopen("counter.txt", "w"); // Открываем файл в режиме записи
-					$mytext = 0; // Исходная строка
-					$test = fwrite($fp, $mytext); // Запись в файл
-					fclose($fp); //Закрытие файла
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nФайл создан";
-					}
-					else
-					{
-						$otvet = "[id{$user_id}|{$user_name}{$pref}],\nНет";
-					}
-						break;
+				// case 'дуцсчётчик':
+				// 	$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
+				// 	if ($fp)
+				// 	{
+				// 		while (!feof($fp))
+				// 		{
+				// 		$mytext = fgets($fp, 999);
+				// 		}
+				// 	}
+				// 	else $mytext = "Ошибка при открытии файла";
+				// 	fclose($fp);
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСчётчик дуца: {$mytext}";
+				// 	break;
+				// 	//------------
+				// 	case 'дуцсоздайфайл':
+				// 	if($user_id == 20017026)
+				// 	{
+				// 	$fp = fopen("counter.txt", "w"); // Открываем файл в режиме записи
+				// 	$mytext = 0; // Исходная строка
+				// 	$test = fwrite($fp, $mytext); // Запись в файл
+				// 	fclose($fp); //Закрытие файла
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nФайл создан";
+				// 	}
+				// 	else
+				// 	{
+				// 		$otvet = "[id{$user_id}|{$user_name}{$pref}],\nНет";
+				// 	}
+				// 		break;
 					//------------
 				// case 'дуцчтениефайла':
 				// 	$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
@@ -613,21 +613,21 @@ $app->post('/bot', function() use($app) {
 
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 // 
-					$fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
-					if ($fp)
-					{
-						while (!feof($fp))
-						{
-						$mytext = fgets($fp, 999);
-						}
-					}
-					else $mytext = "Ошибка при открытии файла";
-					fclose($fp);
+					// $fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
+					// if ($fp)
+					// {
+					// 	while (!feof($fp))
+					// 	{
+					// 	$mytext = fgets($fp, 999);
+					// 	}
+					// }
+					// else $mytext = "Ошибка при открытии файла";
+					// fclose($fp);
 
-					$fp = fopen("counter.txt", "r+"); // Открываем файл в режиме записи
-					$mytext++; // Исходная строка
-					$test = fwrite($fp, $mytext); // Запись в файл
-					fclose($fp); //Закрытие файла
+					// $fp = fopen("counter.txt", "r+"); // Открываем файл в режиме записи
+					// $mytext++; // Исходная строка
+					// $test = fwrite($fp, $mytext); // Запись в файл
+					// fclose($fp); //Закрытие файла
 
 			return 'ok';
 			break;
