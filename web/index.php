@@ -302,7 +302,7 @@ $app->post('/bot', function() use($app) {
 						 	 }
 						 }
 					 			if ($date == '05.02.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek} - числитель.\nЧиль, сегодня выходной.=)";}
-					 			if ($date == '06.02.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek} - числитель.\nЧиль, сегодня выходной.=)";}
+					 			if ($date == '08.02.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek} - числитель.\nСегондня лаба в 1147л в 10:15.";}
 					// 			if ($date == '15.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nУчебная неделя: {$numofstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
 					// 			if ($date == '03.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
 					// 			if ($date == '04.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}], чиль, выходной. =)";}
@@ -386,7 +386,8 @@ $app->post('/bot', function() use($app) {
 								//Суббота
 									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - числитель.\nЧиль, завтра выходной. =)";
 									break;
-								}								
+								}							
+					 			if ($nextdate == '08.02.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - числитель.\nЗавтра лаба в 1147л в 10:15.";}	
 						// 		if ($nextdate == '01.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
 						// 		if ($nextdate == '15.11.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek}.\n12:00-13:35 Основы теории и техники радиосистем передачи информации(лек) 1146л\nОЛТ(сем):\nс 13:50 в 531";}
 						// 		if ($nextdate == '15.05.2019'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\n13:00 лаба по ЦОСу 934л\n15:40-17:15 Экономика(сем) 526\n17:25-19:00 ОКЭ(лек) 505\n19:10-20:45 ОУД(лек) 505";}	
