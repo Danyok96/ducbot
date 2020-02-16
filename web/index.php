@@ -347,7 +347,7 @@ $app->post('/bot', function() use($app) {
 									break;
 								case 'Fri':
 								//Пятница
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - знаменатель.\n9:20-11:50 Прикладная электродинамика композитных сред(сем) 1039л\n12:00-13:35 Прикладная электродинамика композитных сред(лек) 1039л";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - знаменатель.\n9:20-11:50 Прикладная электродинамика композитных сред(сем) 1039л";
 									break;
 								case 'Sat':
 								//Суббота
