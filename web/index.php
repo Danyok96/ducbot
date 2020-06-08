@@ -213,12 +213,15 @@ $app->post('/bot', function() use($app) {
 				case 'дуцоблако':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}], \nhttps://cloud.mail.ru/public/NAzt/FJpjdhFpZ";
 					break;
-				case 'дуцоблакомыки':
-				case 'дуцоблакоякова':
-				case 'дуцоблакомыкольникова':
-				case 'дуцоблакоор':
-				case 'дуцоблакоора':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}], \nhttps://yadi.sk/d/IN37NgpLzhI1SA";
+				// case 'дуцоблакомыки':
+				// case 'дуцоблакоякова':
+				// case 'дуцоблакомыкольникова':
+				// case 'дуцоблакоор':
+				// case 'дуцоблакоора':
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}], \nhttps://yadi.sk/d/IN37NgpLzhI1SA";
+				// 	break;
+				case 'дуцсписокгруппы':
+					$media = "photo-180470421_457239023";
 					break;
 				// case 'дуцрасписаниеэкзаменов':
 				// //✅⛔⚠
