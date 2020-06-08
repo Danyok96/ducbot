@@ -559,10 +559,10 @@ $app->post('/bot', function() use($app) {
 					// 			       'color" => "primary'
 					// 			     ]]]];
 					break;
-				case 'дуцоблакосерёги':
-				case 'дуцоблакосереги':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/zkdaamG-Ol-sjg";
-					break;
+				// case 'дуцоблакосерёги':
+				// case 'дуцоблакосереги':
+				// 	$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/zkdaamG-Ol-sjg";
+				// 	break;
 				case 'дуцсколькоосталось':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\n" . "Чилить осталось:\n" . time_elapsed_string('2020-02-07 00:00:00', true);
 					break;
