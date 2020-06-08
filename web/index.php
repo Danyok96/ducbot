@@ -574,7 +574,7 @@ $app->post('/bot', function() use($app) {
 					break;
 				case 'дуцрандом':
 					//$rnd = rand(1,100);
-					$otvet = rand(1,100);
+					$otvet = rand(1,17);
 					break;
 				// case 'тест':
 				// 	$otvet = time_elapsed_string('2019-09-09 00:00:00', true);
