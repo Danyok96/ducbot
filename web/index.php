@@ -590,6 +590,7 @@ $app->post('/bot', function() use($app) {
 					$edit_flag = 1;
 					$edited_name = "Тестовое_изменение";
 					$otvet = "Готово!";
+					$chat_id_target = '4';
 					break;
 				case 'дуцдуц':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
@@ -629,7 +630,7 @@ $app->post('/bot', function() use($app) {
 			];
 			//------group_name
 			$request_params_edit = [
-				'chat_id' => $peer_id,
+				'chat_id' => $chat_id_target,
 				'title' => $edited_name,
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.92'
