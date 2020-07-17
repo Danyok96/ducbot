@@ -590,7 +590,7 @@ $app->post('/bot', function() use($app) {
 					$edit_flag = 1;
 					$edited_name = "Тестовое_изменение";
 					$otvet = "Готово!";
-					$chat_id_target = '4';
+					$chat_id_target = '1';
 					break;
 				case 'дуцдуц':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
