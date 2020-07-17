@@ -586,20 +586,25 @@ $app->post('/bot', function() use($app) {
 				case 'дуцрасписание':
 					$media = "photo-180470421_457239022";
 					break;
-				case 'дуцзаменина':
-					$edit_flag = 1;
-					//$edited_name = "Тестовое_изменение";
-					$otvet = "Готово!";
-					$chat_id_target = '1';
+				// case 'дуцзаменина':
+				// 	//$edit_flag = 1;
+				// 	//$edited_name = "Тестовое_изменение";
+				// 	$otvet = "Готово!";
+				// 	$chat_id_target = '1';
+					
+				// 	break;
+				case 'дуцдуц':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
+					break;
+					}
+			//-------
 					if (strpos($message, 'дуцзаменина') !== false)
 					{
 						$message = str_replace('дуцзаменина', '', $message);
 						$edited_name = $message;
-					}
-					break;
-				case 'дуцдуц':
-					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
-					break;
+						$edit_flag = 1;
+						$chat_id_target = '1';
+						$otvet = "Готово!";
 					}
 			//-------
 			if (strpos($message_to_calc, 'дуцпосчитай') !== false) // именно через жесткое сравнение
