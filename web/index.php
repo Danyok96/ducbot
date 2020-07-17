@@ -598,7 +598,7 @@ $app->post('/bot', function() use($app) {
 					break;
 					}
 			//-------
-					if (strpos($message, 'дуцзаменина') !== false)
+					if (strpos($message, 'дуцзаменина') !== false && $user_id == 20017026)
 					{
 						$message = str_replace('дуцзаменина', '', $message);
 						$edited_name = $message;
