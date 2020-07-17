@@ -586,11 +586,16 @@ $app->post('/bot', function() use($app) {
 				case 'дуцрасписание':
 					$media = "photo-180470421_457239022";
 					break;
-				case 'дуцзамени':
+				case 'дуцзаменина':
 					$edit_flag = 1;
-					$edited_name = "Тестовое_изменение";
+					//$edited_name = "Тестовое_изменение";
 					$otvet = "Готово!";
 					$chat_id_target = '1';
+					if (strpos($message_to_calc, 'дуцзаменина') !== false)
+					{
+						$message_to_calc = str_replace('дуцзаменина', '', $message_to_calc);
+						$edited_name = $message_to_calc;
+					}
 					break;
 				case 'дуцдуц':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
