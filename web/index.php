@@ -591,10 +591,10 @@ $app->post('/bot', function() use($app) {
 					//$edited_name = "Тестовое_изменение";
 					$otvet = "Готово!";
 					$chat_id_target = '1';
-					if (strpos($message_to_calc, 'дуцзаменина') !== false)
+					if (strpos($message, 'дуцзаменина') !== false)
 					{
-						$message_to_calc = str_replace('дуцзаменина', '', $message_to_calc);
-						$edited_name = $message_to_calc;
+						$message = str_replace('дуцзаменина', '', $message);
+						$edited_name = $message;
 					}
 					break;
 				case 'дуцдуц':
