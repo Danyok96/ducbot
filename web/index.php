@@ -601,9 +601,10 @@ $app->post('/bot', function() use($app) {
 					if (strpos($message, 'дуцзаменина') !== false && $user_id == 20017026)
 					{
 						$message = str_replace('дуцзаменина', '', $message);
+						$chat_id_target = mb_substr( $message, 0, 1);
 						$edited_name = $message;
 						$edit_flag = 1;
-						$chat_id_target = '1';
+						
 						$otvet = "Готово!";
 					}
 			//-------
