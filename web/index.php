@@ -605,7 +605,7 @@ $app->post('/bot', function() use($app) {
 						$edited_name = $message;
 						$edit_flag = 1;
 						
-						$otvet = $chat_id_target;
+						$otvet = "Готово!";
 					}
 			//-------
 			if (strpos($message_to_calc, 'дуцпосчитай') !== false) // именно через жесткое сравнение
