@@ -65,6 +65,7 @@ $app->post('/bot', function() use($app) {
 			$numofnextweek = date("W", $testnext);
 			$numofnextstudweek = $numofnextweek-5;//---
 			$sex = $user_info->response[0]->sex;
+			$edit_flag = 0;
 			switch ($sex) {
 				case '1':
 					$pref = '-тян';
@@ -585,6 +586,11 @@ $app->post('/bot', function() use($app) {
 				case 'дуцрасписание':
 					$media = "photo-180470421_457239022";
 					break;
+				case 'дуцзамени':
+					$edit_flag = 1;
+					$edited_name = "Тестовое_изменение";
+					$otvet = "Готово!";
+					break;
 				case 'дуцдуц':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}] [id{$user_id}|{$user_name}{$pref}].";
 					break;
@@ -621,10 +627,21 @@ $app->post('/bot', function() use($app) {
 				'access_token' => getenv('VK_TOKEN'),
 				'v' => '5.92'
 			];
-
+			//------group_name
+			$request_params_edit = [
+				'chat_id' => $peer_id,
+				'title' => $edited_name,
+				'access_token' => getenv('VK_TOKEN'),
+				'v' => '5.92'
+			];
 
 			file_get_contents('https://api.vk.com/method/messages.send?' . http_build_query($request_params));
 // 
+			if ($edit_flag == 1) {
+				file_get_contents('https://api.vk.com/method/messages.editChat?' . http_build_query($request_params_edit));
+				$edit_flag = 0;
+			}
+			
 					// $fp = fopen("counter.txt", "r"); // Открываем файл в режиме чтения
 					// if ($fp)
 					// {
