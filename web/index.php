@@ -584,7 +584,7 @@ $app->post('/bot', function() use($app) {
 				//  	$media = "photo-180470421_456239020";
 				//  	break;	
 				case 'дуцрасписание':
-					$media = "photo-180470421_457239022";
+					$media = "photo-180470421_457239024";
 					break;
 				// case 'дуцзаменина':
 				// 	//$edit_flag = 1;
