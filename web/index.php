@@ -63,7 +63,7 @@ $app->post('/bot', function() use($app) {
 			$nextday = date("D", $next_date);
 			$testnext = strtotime($nextdate);
 			$numofnextweek = date("W", $testnext);
-			$numofnextstudweek = $numofnextweek-5;//---
+			$numofnextstudweek = $numofnextweek-35;//---
 			$sex = $user_info->response[0]->sex;
 			$edit_flag = 0;
 			switch ($sex) {
