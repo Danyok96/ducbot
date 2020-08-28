@@ -236,7 +236,7 @@ $app->post('/bot', function() use($app) {
 					break;	
 				case 'дуцрасписаниенасегодня':
 					// $otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nЧиль, сегодня выходной. =)";
-					// if ($date == '09.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по РСПИ (9 января 15:00 1146л)";}
+					if ($date == '28.08.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nПока чилибось.=)";}
 					// if ($date == '10.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по РСПИ (10 января 14:00 1039л)";}
 					// if ($date == '13.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня консультация по ТОР (13 января 12:00 507)";}
 					// if ($date == '15.01.2020'){$otvet = "[id{$user_id}|{$user_name}{$pref}],\nСегодня: {$date}. {$arr_of_day[$day_ru]}.\nСегодня экзамен по ТОР (15 января 9:00 1146л)";}
