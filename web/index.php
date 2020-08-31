@@ -90,7 +90,7 @@ $app->post('/bot', function() use($app) {
 			$day_ru_next = date('w')+1;
 			if($day_ru_next == '7'){$day_ru_next = '0';}
 			//-----
-			//if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
+			if ($user_id == 20017026) { $user_name = 'Создатель';$pref = '';}
 			if ($user_id == 201182825) { $user_name = 'Ирусик';$pref = '-тян';}
 			if ($user_id == 134572907) { $user_name = "Agent Kuz'mich";$pref = '';}
 			if ($user_id == 346654275) { $user_name = 'Фил';$pref = '';}
