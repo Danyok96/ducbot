@@ -374,7 +374,7 @@ $app->post('/bot', function() use($app) {
 							switch ($nextday) {
 								case 'Sun':
 								//Воскресенье
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - числитель.\nЧиль, звтра выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - числитель.\nЧиль, завтра выходной. =)";
 									break;
 								case 'Mon':
 								//Понедельник
@@ -382,7 +382,7 @@ $app->post('/bot', function() use($app) {
 									break;
 								case 'Tue':
 								//Вторник
-									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - числитель.\nЧиль, сегодня выходной. =)";
+									$otvet = "[id{$user_id}|{$user_name}{$pref}],\nЗавтра: {$nextdate}. {$arr_of_day[$day_ru_next]}.\nУчебная неделя: {$numofnextstudweek} - числитель.\nЧиль, завтра выходной. =)";
 									break;
 								case 'Wed':
 								//Среда
