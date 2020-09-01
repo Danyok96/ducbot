@@ -568,6 +568,13 @@ $app->post('/bot', function() use($app) {
 					// 			       'color" => "primary'
 					// 			     ]]]];
 					break;
+				case 'дуцуберикнопки':
+					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем убрать кнопки.=)";
+					$buttons = [
+									'buttons' => [],
+								   'one_time' => true
+								];
+					break;
 				case 'дуцоблакосерёги':
 				case 'дуцоблакосереги':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nhttps://yadi.sk/d/mlu282reZHZSIQ";
