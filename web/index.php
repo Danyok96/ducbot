@@ -549,7 +549,7 @@ $app->post('/bot', function() use($app) {
 				case 'дуцкнопки':
 					$otvet = "[id{$user_id}|{$user_name}{$pref}],\nПопробуем запостить кнопки.=)";
 					$buttons = [
-								   'one_time' => true,
+								   'one_time' => false,
 								   'buttons' => [
 								     [[
 								       'action' => [
