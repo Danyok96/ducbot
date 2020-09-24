@@ -647,7 +647,9 @@ $app->post('/bot', function() use($app) {
 			if(strpos($message_to_convert, 'дуц переведи') !== false)
 			{
 				$message_to_convert = str_replace('дуц переведи ', '', $message_to_convert);
-				$otvet = $message_to_convert;
+				$pos_a = strpos($message_to_convert, ' в ');
+				$pos_b = strrpos($message_to_convert, ' в ');
+				$otvet = "До: ".$pos_a."После".$pos_b;
 
 			}
 			else
