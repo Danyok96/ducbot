@@ -46,13 +46,14 @@ $app->post('/bot', function() use($app) {
 			$user_name = $user_info->response[0]->first_name;
 			$message = $data->object->text;
 			$attachments_type = $data->object->attachments[0]->type;
+			$message_to_convert = $message;
 			$message = mb_strtolower($message);
 			$message_to_calc = $message;
 			$dots = array(".",",","?"," ");
 			$dots_to_calc = array(",","?"," ");
 			$message = str_replace($dots, "", $message);
 			$message_to_calc = str_replace($dots_to_calc, "", $message_to_calc);
-			$message_to_convert = $message_to_calc;
+			$message_to_convert = str_replace($dots_to_calc, "", $message_to_convert);
 			$date = date("d.m.Y");
 			$day = date("D");
 			$time = date("H:i");
