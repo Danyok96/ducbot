@@ -644,7 +644,7 @@ $app->post('/bot', function() use($app) {
 			}
 			//---------------------------------------------------
 			//конвертация величин
-			if(strpos($message_to_convert, 'дуцпереведи') !== false)
+			if(strpos($message_to_convert, 'дуц переведи') !== false)
 			{
 				$message_to_convert = str_replace('дуцпереведи', '', $message_to_convert);
 				$otvet = $message_to_convert;
