@@ -52,6 +52,7 @@ $app->post('/bot', function() use($app) {
 			$dots_to_calc = array(",","?"," ");
 			$message = str_replace($dots, "", $message);
 			$message_to_calc = str_replace($dots_to_calc, "", $message_to_calc);
+			$message_to_convert = $message_to_calc;
 			$date = date("d.m.Y");
 			$day = date("D");
 			$time = date("H:i");
@@ -639,7 +640,20 @@ $app->post('/bot', function() use($app) {
 			} else {
     			//$otvet =  'Не найдено';
 			}
-			//-------
+			//---------------------------------------------------
+			//конвертация величин
+			if(strpos($message_to_convert, 'дуцпереведи') !== false)
+			{
+				$message_to_convert = str_replace('дуцпереведи', '', $message_to_convert);
+				$otvet = $message_to_convert;
+
+			}
+			else
+			{
+
+			}
+			//----------------------------------------------------
+
 			$request_params = [
 				//'user_id' => $user_id,
 				'random_id' => 0,
