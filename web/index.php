@@ -648,8 +648,9 @@ $app->post('/bot', function() use($app) {
 			{
 				$message_to_convert = str_replace('дуц переведи ', '', $message_to_convert);
 				$pos_a = strpos($message_to_convert, ' в ');
+				$pos_b = strrpos($message_to_convert, ' в ');
 				$first_part = mb_substr( $message_to_convert, 0, $pos_a);
-				$second_part = mb_substr( $message_to_convert, $pos_a);
+				$second_part = mb_substr( $message_to_convert, $pos_b);
 				$first_part = str_replace(' в ', '', $first_part);
 				$otvet = "Первая часть: ".$first_part."\nВторая часть: ".$second_part;
 
