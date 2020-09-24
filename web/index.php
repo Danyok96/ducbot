@@ -650,6 +650,7 @@ $app->post('/bot', function() use($app) {
 				$pos_a = strpos($message_to_convert, ' в ');
 				$first_part = mb_substr( $message_to_convert, 0, $pos_a);
 				$second_part = mb_substr( $message_to_convert, $pos_a);
+				$first_part = str_replace(' в ', '', $first_part);
 				$otvet = "Первая часть: ".$first_part."\nВторая часть: ".$second_part;
 
 			}
