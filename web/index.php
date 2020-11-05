@@ -622,6 +622,16 @@ $app->post('/bot', function() use($app) {
 						$otvet = "Готово!";
 					}
 			//-------
+					if (strpos($message, 'дуцнапиши') !== false && $user_id == 20017026) {
+						$message = str_replace('дуцзаменина', '', $message);
+						$peer_id = mb_substr( $message, 0, 1);
+						$message = mb_substr( $message, 1);
+						$edited_name = $message;
+						
+						$otvet = "Готово!";
+					}
+
+			//-------
 			if (strpos($message_to_calc, 'дуцпосчитай') !== false) // именно через жесткое сравнение
 			{
 				$message_to_calc = str_replace('дуцпосчитай', '', $message_to_calc);
