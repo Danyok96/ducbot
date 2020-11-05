@@ -623,7 +623,7 @@ $app->post('/bot', function() use($app) {
 					}
 			//-------
 					if (strpos($message, 'дуцнапиши') !== false && $user_id == 20017026) {
-						$message = str_replace('дуцзаменина', '', $message);
+						$message = str_replace('дуцнапиши', '', $message);
 						$peer_id = mb_substr( $message, 0, 1);
 						$message = mb_substr( $message, 1);
 						$edited_name = $message;
