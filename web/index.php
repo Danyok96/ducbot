@@ -629,7 +629,7 @@ $app->post('/bot', function() use($app) {
 						$message = mb_substr( $message, 1);
 						$edited_name = $message;
 						
-						$otvet = "Готово!";
+						$otvet = $message;
 					}
 
 			//-------
